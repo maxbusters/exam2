@@ -313,9 +313,11 @@
     }
 
     &__bottom {
-        background-image: url(../images/down-layer.png);
+        background-image: url(../images/Background__footer.png);
+        background-repeat: no-repeat;
         height: 549px;
         position: relative;
+        width: 100%;
     }
 
     &__contacts {
@@ -416,7 +418,8 @@
                 background-repeat: no-repeat;
                 position: absolute;
                 width: 100%;
-                height: 50px;
+                height: 197px;
+                left: 0;
                 top: 253px;
                 z-index: -1;
             }
