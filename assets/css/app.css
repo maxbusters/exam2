@@ -76,14 +76,16 @@ main {
   flex: auto;
 }
 
-button {
-  border: none;
-  background-color: #fff;
-  color: #000;
-  cursor: pointer;
+a {
+  text-decoration: none;
+  color: black;
 }
 
-.container, .main__container, .header__container {
+li {
+  list-style: none;
+}
+
+.container, .header__container {
   width: 81.25%;
   margin: 0 auto;
 }/*# sourceMappingURL=app.css.map */
