@@ -11,37 +11,32 @@
         width: 100%;
         z-index: 1;
     }
-    &__container {   
+
+    &__container {
         @extend .container;
-    } 
+    }
 
 }
 
-.main { 
-    .intro{
+.main {
+    .intro {
         padding: 100px 0px 150px;
 
-        &__line{
+        &__line {
             width: 100px;
             height: 1px;
             background-color: red;
         }
     }
 
-    .news {
-    
+    // .news {}
 
-    }
-    .gallery{
+    // .gallery {}
 
-    }
-
-    .footer{
-        &__form {
-
+    .footer {
+        &__map {
+            
         }
 
     }
 }
-
-
