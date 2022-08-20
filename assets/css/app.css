@@ -88,13 +88,4 @@ li {
 .container, .header__container {
   width: 81.25%;
   margin: 0 auto;
-}
-
-.main {
-  padding: 100px 0px 150px;
-}
-.main .intro__line {
-  width: 100px;
-  height: 1px;
-  background-color: #2C4058;
 }/*# sourceMappingURL=app.css.map */
