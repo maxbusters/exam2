@@ -1,9 +1,12 @@
 var map;
 function initMap() {
-    const posit = { lat: 40.694449, lng: -73.8978617 }
+    const posit = { lat: 40.699124288249635, lng: -73.8577954995236 }
     map = new google.maps.Map(document.getElementById('map'), {
-        center: posit,
-        zoom: 15,
+        center: {
+            lat: 40.6677641312532,  
+            lng: -73.90124039178546,
+        },
+        zoom: 12,
         styles: [
             {
               "elementType": "geometry",
@@ -169,8 +172,8 @@ function initMap() {
     const marker = new google.maps.Marker({
         position: posit,
         map: map,
+        icon: 'assets/images/Pin.png',
         title: "91 Nolan Extensions Suite 670",
-        animation: google.maps.Animation.BOUNCE,
     });
     
 }
