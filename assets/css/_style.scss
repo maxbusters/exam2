@@ -25,6 +25,10 @@
     &__nav {
         @include flex-row;
         justify-content: space-between;
+
+        &__el {
+            color: white;
+        }
     }
 
     .socials {
