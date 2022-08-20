@@ -1,0 +1,18 @@
+<svg width="432" height="432" viewBox="0 0 432 432" fill="none" xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink">
+    <line x1="0.5" y1="431" x2="0.499996" y2="331" stroke="#FFCC00" />
+    <line x1="1" y1="430.5" x2="101" y2="430.5" stroke="#FFCC00" />
+    <line x1="431" y1="431.5" x2="331" y2="431.5" stroke="#FFCC00" />
+    <line x1="430.5" y1="431" x2="430.5" y2="331" stroke="#FFCC00" />
+    <line x1="431.5" y1="1.00012" x2="431.5" y2="101" stroke="#FFCC00" />
+    <line x1="431" y1="1.50012" x2="331" y2="1.50011" stroke="#FFCC00" />
+    <line x1="1.00014" y1="0.5" x2="101" y2="0.5" stroke="#FFCC00" />
+    <line x1="1.50014" y1="1" x2="1.50014" y2="101" stroke="#FFCC00" />
+    <rect x="16.5001" y="16.5" width="399" height="399" fill="url(#pattern0)" stroke="#FFCC00" />
+    <defs>
+        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+            <use xlink:href="#image0_4_42" transform="scale(0.00257732)" />
+        </pattern>
+        <img href="" id="image0_4_42" width="388" height="388"  />
+    </defs>
+</svg>

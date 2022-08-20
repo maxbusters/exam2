@@ -1,0 +1,15 @@
+.header {
+    &__container {   
+        @extend .container;
+    } 
+}
+
+.main { 
+    &__wrapper {
+    }
+
+    &__container {
+        @extend .container;
+    }
+
+}
