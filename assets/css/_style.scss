@@ -131,14 +131,10 @@
                 height: 470px;
                 margin-right: 70px;
             }
-<<<<<<< HEAD
 
-            &--txt {
-                padding-top: 94px;
-=======
             &--txt{
                 padding-top: 80px;
->>>>>>> 87d72b5195dda78cff99d5fee601b16e24731b96
+                
 
                 &--subtitle {
                     @include myfont($monserat, 400, 22px, 27px, #2C4058);
