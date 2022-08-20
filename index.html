@@ -33,34 +33,26 @@
             </svg>
             <nav class="header__nav nav">
                 <div class="nav__el el">
-                    <a class="el__link" href="#">
-                        <svg class="el__dot" width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="4.5" cy="4.5" r="4" stroke="white"/>
-                            </svg>
+                    <a href="#">
+                        <span class="el__dot"></span>
                     <span class="el__text">ABOUT US</span>
                     </a>
                 </div>
                 <div class="nav__el el">
-                    <a class="el__link" href="#">
-                        <svg class="el__dot" width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="4.5" cy="4.5" r="4" stroke="white"/>
-                            </svg>
-                        <span class="el__text">PROJECTS</span>
+                    <a href="#">
+                        <span class="el__dot"></span>
+                    <span class="el__text">PROJECTS</span>
                     </a>
                 </div>
                 <div class="nav__el el">
-                    <a class="el__link" href="#">
-                        <svg class="el__dot" width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="4.5" cy="4.5" r="4" stroke="white"/>
-                            </svg>
+                    <a href="#">
+                        <span class="el__dot"></span>
                     <span class="el__text">NEWS</span>
                     </a>
                 </div>
                 <div class="nav__el el">
-                    <a class="el__link" href="#">
-                        <svg class="el__dot" width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="4.5" cy="4.5" r="4" stroke="white"/>
-                            </svg>
+                    <a href="#">
+                        <span class="el__dot"></span>
                     <span class="el__text">CONTACT</span>
                     </a>
                 </div>
@@ -93,6 +85,10 @@
                 <h1 class="header__title">SIMPLE & MODERN</h1>
                 <h2 class="header__subtitle">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</h2>
             </div>
+            <svg width="42" height="40" viewBox="0 0 42 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path opacity="0.7" d="M40.5447 20C40.5447 30.7685 31.7958 39.5 21.0011 39.5C10.2064 39.5 1.45746 30.7685 1.45746 20C1.45746 9.23147 10.2064 0.5 21.0011 0.5C31.7958 0.5 40.5447 9.23147 40.5447 20Z" stroke="white"/>
+                </svg>
+                
         </div>
 
     </header>
@@ -181,7 +177,16 @@
     <!-- Maria -->
     <footer class="footer">
         <div class="footer__map" id="map"></div>
-        <div class="footer__contacts"></div>
+        <div class="footer__contacts">
+            <img src="assets/images/Logo.svg" alt="logo">
+            <div class="footer__contacts__social">
+                <div class="social__wrapper">
+                    <svg class="social__svg">
+                        <use xlink:href="assets/images/sprite.svg#facebbok"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
         <div class="footer__form"></div>
     </footer>
 
