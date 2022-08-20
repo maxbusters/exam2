@@ -17,20 +17,21 @@
     justify-content: center;
 }
 
-@mixin roboto($weight: 400){
-    font-family: 'Roboto';
+@mixin monserat($weight: 400){
+    font-family: $monserat;
     font-weight: $weight;
 }
 
-@mixin raleway($weight: 400) {
-    font-family: 'Raleway';
+@mixin source($weight: 400){
+    font-family: $source;
     font-weight: $weight;
 }
 
-@mixin opensans($weight: 400) {
-    font-family: 'Open Sans';
+@mixin opensans($weight: 400){
+    font-family: $open;
     font-weight: $weight;
 }
+
 
 @mixin font-sizes($size: 16px, $height: 24px) {
     font-size: $size;

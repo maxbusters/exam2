@@ -78,7 +78,6 @@ main {
 
 a {
   text-decoration: none;
-  color: black;
 }
 
 li {
@@ -107,6 +106,7 @@ li {
   z-index: 0;
 }
 .header__top-wrap {
+  padding-top: 53px;
   position: relative;
   z-index: 3;
   display: flex;
@@ -118,10 +118,29 @@ li {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+}
+.header__nav .el {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
   justify-content: space-between;
 }
-.header__nav__el {
+.header__nav .el__dot {
+  margin-right: 14px;
+}
+.header__nav .el__text {
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
   color: white;
+}
+.header__nav .el + .el {
+  margin-left: 70px;
+}
+.header__nav .el:hover .el__dot {
+  fill: white;
 }
 .header .socials__el circle {
   stroke: white;

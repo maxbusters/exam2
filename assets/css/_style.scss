@@ -16,6 +16,7 @@
     }
     
     &__top-wrap{
+        padding-top: 53px ;
         position: relative;
         z-index: 3;
         @include flex-row;
@@ -24,11 +25,30 @@
 
     &__nav {
         @include flex-row;
-        justify-content: space-between;
-
-        &__el {
-            color: white;
+        align-items: center;
+        .el {
+            @include flex-row;
+            justify-content: space-between;
+            &__dot {
+                margin-right: 14px;
+            }
+            &__text{
+                @include source(400);
+                @include font-sizes(14px, 18px);
+                color: white;
+            }
         }
+
+        .el + .el {
+            margin-left: 70px;
+        }
+
+        .el:hover {
+            .el__dot{
+                fill: white;
+            }
+        }
+
     }
 
     .socials {
