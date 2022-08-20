@@ -1,7 +1,16 @@
 .header {
-    background-image: url(../images/down-layer.png), url(../images/up-layer.png);
-    background-position: right bottom, left top;
-    background-repeat: no-repeat, repeat;
+    position: relative;
+    background-image: url(../images/down-layer.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 800px;
+
+    &__bg {
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+    }
     &__container {   
         @extend .container;
     } 
@@ -9,6 +18,16 @@
 }
 
 .main { 
+    .intro{
+        padding: 100px 0px 150px;
+
+        &__line{
+            width: 100px;
+            height: 1px;
+            background-color: red;
+        }
+    }
+
     .news {
     
 
