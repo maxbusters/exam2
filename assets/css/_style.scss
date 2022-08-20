@@ -25,7 +25,21 @@
         &__line {
             width: 100px;
             height: 1px;
-            background-color: red;
+            background-color: #2C4058;
+            margin: 0 auto 30px auto;
+        }
+
+        &__title{
+            text-align: center;
+            @include myfont($monserat,700,44px,54px,#2C4058);
+            margin-bottom:90px;
+        }
+
+        &__content{
+            display: flex;
+            margin-right: 215px;
+            padding-bottom: 57px;
+            background-color: #55B7FF;
         }
     }
 
