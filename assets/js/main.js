@@ -292,3 +292,14 @@ function initMap() {
       
     }
 }
+
+const getInTouch = document.getElementsByClassName('footer__form__start')
+const closeForm = document.getElementsByClassName('footer__form__end__close')
+
+$(getInTouch).on('click', function(){
+  $('.footer__form__end').toggle()
+})
+
+$(closeForm).on('click', function(){
+  $('.footer__form__end').toggle()
+})
