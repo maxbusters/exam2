@@ -14,8 +14,8 @@
     &__container {
         @extend .container;
     }
-    
-    &__top-wrap{
+
+    &__top-wrap {
         position: relative;
         z-index: 3;
         @include flex-row;
@@ -40,7 +40,8 @@
 
         .socials__el:hover {
             cursor: pointer;
-            circle{
+
+            circle {
                 stroke: orangered;
             }
         }
@@ -58,57 +59,61 @@
             margin: 0 auto 30px auto;
         }
 
-        &__title{
+        &__title {
             text-align: center;
-            @include myfont($monserat,700,44px,54px,#2C4058);
-            margin-bottom:90px;
+            @include myfont($monserat, 700, 44px, 54px, #2C4058);
+            margin-bottom: 90px;
         }
 
-        &__content{
+        &__content {
             display: flex;
             margin-right: 215px;
             padding-top: 57px;
             background-color: #55B7FF;
 
-            &--img{
+            &--img {
                 width: 630px;
                 height: 470px;
                 margin-right: 70px;
             }
-            &--txt{
+
+            &--txt {
                 padding-top: 94px;
 
-                &--subtitle{
-                    @include myfont($monserat,400,22px,27px,#2C4058);
+                &--subtitle {
+                    @include myfont($monserat, 400, 22px, 27px, #2C4058);
                 }
-                &--title{
-                    @include myfont($monserat,700,44px,54px,#2C4058);
+
+                &--title {
+                    @include myfont($monserat, 700, 44px, 54px, #2C4058);
                     margin-bottom: 19px;
                 }
-                &--text{
-                    @include myfont($open,400,18px,30px,#2C4058);
+
+                &--text {
+                    @include myfont($open, 400, 18px, 30px, #2C4058);
                     margin-bottom: 40px;
                     max-width: 470px;
                 }
-                &--button{
+
+                &--button {
                     border: 1px #2C4058 solid;
                     width: 190px;
                     height: 50px;
                     margin-bottom: 60px;
 
-                    a{
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    @include myfont($monserat,400,14px,17px,#000000);
-                    cursor: pointer;
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        @include myfont($monserat, 400, 14px, 17px, #000000);
+                        cursor: pointer;
                     }
                 }
             }
-     
-            
+
+
         }
     }
 
@@ -116,10 +121,28 @@
 
     // .gallery {}
 
-    .footer {
-        &__map {
-            
+}
+
+.footer {
+    &__contacts {
+        background-image: url(../images/down-layer.png);
+        height: 549px;
+
+        &__social {
+            .social__wrapper {
+                border: 1px solid white;
+                border-radius: 50%;
+                height: 40px;
+                width: 40px;
+            }
+
+            .social__svg {
+               height: 100%;
+               width: 100%;
+            }
         }
 
     }
+
+
 }
