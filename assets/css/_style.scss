@@ -9,6 +9,16 @@
 }
 
 .main { 
+    .intro{
+        padding: 100px 0px 150px;
+
+        &__line{
+            width: 100px;
+            height: 1px;
+            background-color: red;
+        }
+    }
+
     .news {
     
 

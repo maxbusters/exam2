@@ -98,4 +98,12 @@ li {
   background-image: url(../images/Background.png), url(../images/tu-tram-pham-202263\ 1.png);
   background-position: right bottom, left top;
   background-repeat: no-repeat, repeat;
+}
+.main .intro {
+  padding: 100px 0px 150px;
+}
+.main .intro__line {
+  width: 100px;
+  height: 1px;
+  background-color: red;
 }/*# sourceMappingURL=app.css.map */
