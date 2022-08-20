@@ -209,8 +209,73 @@
 
     }
 
-    // .news {}
-
+    .news {
+        background-image: url(../images/background-news.jpg);
+        &__title {
+            font-family: $monserat;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 44px;
+            line-height: 54px;
+            text-align: center;
+            color: $white;
+        }
+        &__block {
+            max-width: 370px;
+            background-color: $white;
+            .block__wrapper {
+                padding: 20px;
+            }
+            h3 {
+                font-family: $monserat;
+                font-style: normal;
+                font-weight: 700;
+                font-size: 22px;
+                line-height: 27px;
+                color: #2C4058;
+                margin: 15px;
+            }
+            .block__description {
+                font-family: $open;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 25px;
+                color: #2C4058;
+                margin-bottom: 46px;
+            }
+            .user__info {
+                font-family: $open;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 25px;
+                color: #2C4058;
+                display: flex;
+                img {
+                    border-radius: 50%;
+                    margin-right: 20px;
+                }
+                p {
+                    font-family: $monserat;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 22px;
+                    color: #2C4058;
+                    margin-bottom: 6px;
+                }
+            }
+            span {
+                font-family: $monserat;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 17px;
+                color: #55B7FF;
+            }
+        }
+    }
     // .gallery {}
 
 }
