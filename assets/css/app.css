@@ -207,4 +207,11 @@ li {
   line-height: 17px;
   color: #000000;
   cursor: pointer;
+}
+.main .intro__content--txt--button--link {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 23px;
+  color: black;
 }/*# sourceMappingURL=app.css.map */
