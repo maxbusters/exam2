@@ -91,7 +91,7 @@ li {
 }
 
 #map {
-  height: 100%;
+  height: 700px;
 }
 
 .header {
@@ -100,13 +100,39 @@ li {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 800px;
 }
 .header__bg {
   position: absolute;
   width: 100%;
-  z-index: 1;
+  z-index: 0;
 }
+.header__top-wrap {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-between;
+}
+.header__nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-between;
+}
+.header__nav__el {
+  color: white;
+}
+.header .socials__el circle {
+  stroke: white;
+}
+.header .socials .socials__el:hover {
+  cursor: pointer;
+}
+.header .socials .socials__el:hover circle {
+  stroke: orangered;
+}
+
 .main .intro {
   padding: 100px 0px 150px;
 }

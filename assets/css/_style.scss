@@ -4,24 +4,54 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 800px;
 
     &__bg {
         position: absolute;
         width: 100%;
-        z-index: 1;
+        z-index: 0;
     }
-    &__container {   
-        @extend .container;
-    } 
 
+    &__container {
+        @extend .container;
+    }
+    
+    &__top-wrap{
+        position: relative;
+        z-index: 3;
+        @include flex-row;
+        justify-content: space-between;
+    }
+
+    &__nav {
+        @include flex-row;
+        justify-content: space-between;
+
+        &__el {
+            color: white;
+        }
+    }
+
+    .socials {
+        &__el {
+            circle {
+                stroke: white;
+            }
+        }
+
+        .socials__el:hover {
+            cursor: pointer;
+            circle{
+                stroke: orangered;
+            }
+        }
+    }
 }
 
-.main { 
-    .intro{
+.main {
+    .intro {
         padding: 100px 0px 150px;
 
-        &__line{
+        &__line {
             width: 100px;
             height: 1px;
             background-color: #2C4058;
@@ -82,20 +112,14 @@
         }
     }
 
-    .news {
-    
+    // .news {}
 
-    }
-    .gallery{
+    // .gallery {}
 
-    }
-
-    .footer{
-        &__form {
-
+    .footer {
+        &__map {
+            
         }
 
     }
 }
-
-
