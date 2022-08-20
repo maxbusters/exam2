@@ -211,6 +211,12 @@
 
     .news {
         background-image: url(../images/background-news.jpg);
+        background-repeat: no-repeat;
+        background-position-x: center;
+        max-height: 978px;
+        position: relative;
+        padding: 120px 0;
+
         &__title {
             font-family: $monserat;
             font-style: normal;
@@ -219,13 +225,62 @@
             line-height: 54px;
             text-align: center;
             color: $white;
+            position: relative;
+            margin-bottom: 90px;
+
+            &::after {
+                content: '';
+                width: 100px;
+                height: 1px;
+                position: absolute;
+                background-color: $white;
+                right: calc(50% - 20px);
+                margin: -30px;
+            }
+
         }
+
+        &__carousel {
+            max-width: 1170px;
+            margin: 0 auto;
+
+            .slick-prev,
+            .slick-next {
+                width: 40px;
+                height: 40px;
+            }
+
+            .slick-next {
+                background-image: url(../images/right.svg);
+
+                &::before {
+                    display: none;
+                }
+            }
+
+            .slick-prev {
+                background-image: url(../images/left.svg);
+
+                &::before {
+                    display: none;
+                }
+            }
+        }
+
         &__block {
             max-width: 370px;
+            max-height: 514px;
             background-color: $white;
+            margin-right: 30px;
+
+            .block__img {
+                width: 100%;
+            }
+
             .block__wrapper {
                 padding: 20px;
             }
+
             h3 {
                 font-family: $monserat;
                 font-style: normal;
@@ -233,8 +288,9 @@
                 font-size: 22px;
                 line-height: 27px;
                 color: #2C4058;
-                margin: 15px;
+                margin: 15px 0;
             }
+
             .block__description {
                 font-family: $open;
                 font-style: normal;
@@ -243,7 +299,9 @@
                 line-height: 25px;
                 color: #2C4058;
                 margin-bottom: 46px;
+                width: 330px;
             }
+
             .user__info {
                 font-family: $open;
                 font-style: normal;
@@ -252,10 +310,12 @@
                 line-height: 25px;
                 color: #2C4058;
                 display: flex;
+
                 img {
                     border-radius: 50%;
                     margin-right: 20px;
                 }
+
                 p {
                     font-family: $monserat;
                     font-style: normal;
@@ -266,6 +326,7 @@
                     margin-bottom: 6px;
                 }
             }
+
             span {
                 font-family: $monserat;
                 font-style: normal;
@@ -276,10 +337,11 @@
             }
         }
     }
+
     // .gallery {}
 
-}
 
+}
 .footer {
     &__contacts {
         background-image: url(../images/down-layer.png);
