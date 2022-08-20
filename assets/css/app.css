@@ -76,11 +76,13 @@ main {
   flex: auto;
 }
 
-button {
-  border: none;
-  background-color: #fff;
-  color: #000;
-  cursor: pointer;
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
 }
 
 .container, .main__container, .header__container {
