@@ -63,6 +63,10 @@
             }
         }
 
+        .socials__el + .socials__el {
+            margin-left: 20px;
+        }
+
         .socials__el:hover {
             cursor: pointer;
 
@@ -70,6 +74,25 @@
                 stroke: orangered;
             }
         }
+    }
+
+    &__center-wrap {
+        margin-top: 223px;
+        margin-bottom: 330px;
+        @include flex-col;
+        color: white;
+    }
+
+    &__title {
+        @include monserat(700);
+        @include font-sizes(80px, 98px);
+        margin-bottom: 20px;
+    }
+
+    &__subtitle {
+        @include monserat(700);
+        @include font-sizes(18px, 22px);
+        letter-spacing: 0.3em;
     }
 }
 
@@ -108,9 +131,14 @@
                 height: 470px;
                 margin-right: 70px;
             }
+<<<<<<< HEAD
 
             &--txt {
                 padding-top: 94px;
+=======
+            &--txt{
+                padding-top: 80px;
+>>>>>>> 87d72b5195dda78cff99d5fee601b16e24731b96
 
                 &--subtitle {
                     @include myfont($monserat, 400, 22px, 27px, #2C4058);
@@ -144,7 +172,7 @@
                         cursor: pointer;
 
                     &:hover{
-                        background-color: yellow;
+                        background-color: rgb(255, 51, 0);
                     }
 
                     a{
@@ -160,7 +188,10 @@
                 }
                 &--link{
                     @include myfont($open,400,15px,23px,black);
-    
+                    
+                    &:hover a{
+                        color:red;
+                    }
                     
                 }
             }
@@ -210,5 +241,5 @@
 
 }
 
-}
+
 
