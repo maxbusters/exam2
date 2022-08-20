@@ -1,7 +1,11 @@
 .header {
+    background-image: url(../images/Background.png), url(../images/tu-tram-pham-202263\ 1.png);
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
     &__container {   
         @extend .container;
     } 
+
 }
 
 .main { 
