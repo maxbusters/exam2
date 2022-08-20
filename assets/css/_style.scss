@@ -58,12 +58,35 @@
             }
         }
 
+        .socials__el + .socials__el {
+            margin-left: 20px;
+        }
+
         .socials__el:hover {
             cursor: pointer;
             circle{
                 stroke: orangered;
             }
         }
+    }
+
+    &__center-wrap {
+        margin-top: 223px;
+        margin-bottom: 330px;
+        @include flex-col;
+        color: white;
+    }
+
+    &__title {
+        @include monserat(700);
+        @include font-sizes(80px, 98px);
+        margin-bottom: 20px;
+    }
+
+    &__subtitle {
+        @include monserat(700);
+        @include font-sizes(18px, 22px);
+        letter-spacing: 0.3em;
     }
 }
 

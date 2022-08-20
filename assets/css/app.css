@@ -145,11 +145,37 @@ li {
 .header .socials__el circle {
   stroke: white;
 }
+.header .socials .socials__el + .socials__el {
+  margin-left: 20px;
+}
 .header .socials .socials__el:hover {
   cursor: pointer;
 }
 .header .socials .socials__el:hover circle {
   stroke: orangered;
+}
+.header__center-wrap {
+  margin-top: 223px;
+  margin-bottom: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.header__title {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 98px;
+  margin-bottom: 20px;
+}
+.header__subtitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.3em;
 }
 
 .main .intro {
