@@ -24,11 +24,29 @@
 
     &__nav {
         @include flex-row;
-        justify-content: space-between;
+        align-items: center;
 
-        &__el {
-            color: white;
+        .el {
+            @include flex-row;
+            justify-content: space-between;
+            &__dot {
+                margin-right: 14px;
+            }
+            &__text{
+                @include source(400);
+                color: white;
+                
+            }
         }
+
+        .el + .el {
+            margin-left: 70px;
+        }
+
+        .el:hover {
+            
+        }
+
     }
 
     .socials {
