@@ -5,11 +5,22 @@
 }
 
 .main { 
-    &__wrapper {
+    .intro {
+
+    }
+    .news {
+    
+
+    }
+    .gallery{
+
     }
 
-    &__container {
-        @extend .container;
+    .footer{
+        &__form {
+
+        }
+
     }
 
 }
