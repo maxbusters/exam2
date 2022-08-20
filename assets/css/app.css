@@ -188,7 +188,7 @@ li {
   margin-right: 70px;
 }
 .main .intro__content--txt {
-  padding-top: 94px;
+  padding-top: 80px;
 }
 .main .intro__content--txt--subtitle {
   font-family: "Montserrat", sans-serif;
@@ -221,7 +221,7 @@ li {
   margin-bottom: 60px;
 }
 .main .intro__content--txt--button:hover {
-  background-color: yellow;
+  background-color: rgb(255, 51, 0);
 }
 .main .intro__content--txt--button a {
   width: 100%;
@@ -242,6 +242,9 @@ li {
   font-size: 15px;
   line-height: 23px;
   color: black;
+}
+.main .intro__content--txt--link:hover a {
+  color: red;
 }
 .main .intro .intro__content__second {
   background-image: url("../images/section Vitalii/back2.png");
