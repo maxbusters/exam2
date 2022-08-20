@@ -244,7 +244,7 @@ li {
   color: black;
 }
 .main .intro__content--txt--link:hover a {
-  color: red;
+  color: rgb(255, 51, 0);
 }
 .main .intro .intro__content__second {
   background-image: url("../images/section Vitalii/back2.png");
