@@ -105,12 +105,11 @@
                     @include myfont($monserat,400,14px,17px,#000000);
                     cursor: pointer;
                     }
-
-                    &--link{
-                        @include myfont($open,400,15px,23px,black);
-                        
-                        
-                    }
+                }
+                &--link{
+                    @include myfont($open,400,15px,23px,black);
+    
+                    
                 }
             }
      
