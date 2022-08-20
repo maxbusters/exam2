@@ -126,7 +126,7 @@
                 margin-right: 70px;
             }
             &--txt{
-                padding-top: 94px;
+                padding-top: 80px;
 
                 &--subtitle{
                     @include myfont($monserat,400,22px,27px,#2C4058);
@@ -147,7 +147,7 @@
                     margin-bottom: 60px;
 
                     &:hover{
-                        background-color: yellow;
+                        background-color: rgb(255, 51, 0);
                     }
 
                     a{
@@ -162,7 +162,10 @@
                 }
                 &--link{
                     @include myfont($open,400,15px,23px,black);
-    
+                    
+                    &:hover a{
+                        color:red;
+                    }
                     
                 }
             }
