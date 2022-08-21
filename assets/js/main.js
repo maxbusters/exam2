@@ -291,6 +291,22 @@ $(document).ready(function () {
 
 });
 
+let galeryPhoto = document.getElementById("sizePhoto")
+let rightBlock = document.getElementById("hidenField")
+let clicker = document.getElementById("galerySizer")
+clicker.onclick = () =>{
+  galeryPhoto.style.width = "750px";
+  galeryPhoto.style.margin = "0 240px";
+  clicker.style.display = "none"
+  rightBlock.style.display = "none"
+}
+galeryPhoto.onclick = () =>{
+  rightBlock.style.display = "grid"
+  clicker.style.display = "block"
+  galeryPhoto.style.margin = "0";
+  galeryPhoto.style.width = "580px"
+}
+
   const marker = new google.maps.Marker({
     position: posit,
     map: map,
