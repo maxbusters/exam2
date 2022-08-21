@@ -141,7 +141,7 @@ script {
             display: flex;
             padding: 0px 150px;
             padding-top: 57px;
-            background-image: url("../images/section Vitalii/back.png");
+            background-image: url("../images/sectionVitalii/back.png");
             background-repeat: no-repeat;
             background-size: 585px 470px;
             margin-bottom: 120px;
@@ -202,7 +202,7 @@ script {
                     }
                 }
                 &--link a::before{
-                    content: url("../images/section\ Vitalii/target.png");
+                    content: url("../images/sectionVitalii/target.png");
                    
                     margin-right: 10px;
                     
@@ -230,7 +230,7 @@ script {
         }
 
         .intro__content__second {
-            background-image: url("../images/section Vitalii/back2.png");
+            background-image: url("../images/sectionVitalii/back2.png");
             background-repeat: no-repeat;
             background-size: 585px 470px;
             background-position: top right;
@@ -402,6 +402,18 @@ script {
                 grid-template: repeat(2, 1fr) / repeat(2,1fr);
                 row-gap: 10px;
                 column-gap: 10px;
+
+                &--item{
+                    position: relative;
+
+                    &--svg{
+                        position: absolute;
+                        top:0px;
+                        left: 0px;
+                        cursor: pointer;
+    
+                    }
+                }
             }
         }
     }
