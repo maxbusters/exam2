@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/images/favicon/site.webmanifest">
+    <script src="https://kit.fontawesome.com/1ca859b5b6.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -197,21 +202,109 @@
     <!-- Maria -->
     <footer class="footer">
         <div class="footer__map" id="map"></div>
-        <div class="footer__contacts">
-            <img src="assets/images/Logo.svg" alt="logo">
-            <div class="footer__contacts__social">
-                <div class="social__wrapper">
-                    <svg class="social__svg">
-                        <use xlink:href="assets/images/sprite.svg#facebbok" />
-                    </svg>
+        <div class="footer__bottom">
+            <div class="footer__form">
+                <div class="footer__form__start">
+                    <p>
+                        GET IN TOUCH
+                    </p>
+                </div>
+                <div class="footer__form__end">
+                    <span class="footer__form__end__close">
+                        <i class="fa-solid fa-xmark"></i>
+                    </span>
+                    <div class="footer__form__end__bg"></div>
+                    <div class="footer__form__end__line"></div>
+                    <p class="footer__form__end__header">
+                        GET IN TOUCH
+                    </p>
+                    <div class="footer__form__end__contacts">
+                        <div class="left">
+                            <a class="left__link" href="https://goo.gl/maps/SbxiqnYHiA2xmxDBA" target="_blank"
+                                rel="noopener noreferrer">
+                                <span class="left__link__icon">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </span>
+                                91 Nolan Extensions Suite 670
+                            </a>
+                            <a class="left__link" href="tel:+001 356-868-2454">
+                                <span class="left__link__icon">
+                                    <i class="fa-solid fa-phone"></i>
+                                </span>
+                                +001 356-868-2454
+                            </a>
+                            <a class="left__link" href="mailto:montichello@service.com">
+                                <span class="left__link__icon">
+                                    <i class="fa-solid fa-inbox"></i>
+                                </span>
+                                montichello@service.com
+                            </a>
+                            <p>
+                                <span class="left__link__icon">
+                                    <i class="fa-regular fa-clock"></i>
+                                </span>
+                                From 07:05AM to 19:30PM
+                            </p>
+                        </div>
+                        <div class="right">
+                            <form action="" method="post" id = "form">
+                                <input type="text" name="field1" placeholder="Phone number is strating with '+'" id = "mobile" />
+                                <input type="email" name="field2" placeholder="Email" id = "email" />
+                                <button class="right__btn">
+                                    SUBMIT
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__contacts">
+                <div class="footer__contacts__wrapp">
+                    <img src="assets/images/Logo.svg" alt="logo">
+                    <div class="footer__contacts__social">
+                        <a href="https://www.facebook.com/" target="_blank">
+                            <div class="social__wrapper">
+                                <svg class="social__svg social__svg--facebook">
+                                    <use xlink:href="assets/images/sprite.svg#facebook" />
+                                </svg>
+                                <svg class="social__svg social__svg--facebook social__svg--hov">
+                                    <use xlink:href="assets/images/sprite.svg#facebook-hov" />
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="https://twitter.com/" target="_blank">
+                            <div class="social__wrapper">
+                                <svg class="social__svg">
+                                    <use xlink:href="assets/images/sprite.svg#twitter" />
+                                </svg>
+                                <svg class="social__svg social__svg--hov">
+                                    <use xlink:href="assets/images/sprite.svg#twitter-hov" />
+                                </svg>
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/" target="_blank">
+                            <div class="social__wrapper">
+                                <svg class="social__svg">
+                                    <use xlink:href="assets/images/sprite.svg#insta" />
+                                </svg>
+                                <svg class="social__svg social__svg--hov">
+                                    <use xlink:href="assets/images/sprite.svg#insta-hov" />
+                                </svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer__contacts__copyrights">
+                    <p>
+                        Copyrights © 2022 Montichello
+                    </p>
                 </div>
             </div>
         </div>
-        <div class="footer__form"></div>
-        <p>HELLO WORLD</p>
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDceeZlSvZd0ovHTrSVDzXrB-FtwLRBtZ0 &language=en&callback=initMap"
         type="text/javascript"></script>
