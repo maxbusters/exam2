@@ -275,74 +275,103 @@ function initMap() {
     ]
   });
 
-$(document).ready(function () {
-  $(".header__anchor").on('click', function (event) {
-    if (this.hash !== "") {
-      event.preventDefault();
-      var hash = this.hash;
+  $(document).ready(function () {
 
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function () {
-        window.location.hash = hash;
-      });
-    }
+    $.validator.setDefaults({
+      debug: true,
+      success: "valid"
+    });
+
+    $(".header__anchor").on('click', function (event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+        var hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+          window.location.hash = hash;
+        });
+      }
+    });
+
+    $(".news__carousel").slick({
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      prevArrow: $('.news__arr-left'), 
+      nextArrow: $('.news__arr-right'),
+      arrows: true,
+    });
+
+    $(getInTouch).on('click', function () {
+      $('.footer__form__end').toggle()
+    })
+
+    $(closeForm).on('click', function () {
+      $('.footer__form__end').toggle()
+    })
+
+
+    $("#form-contact").validate({
+      rules: {
+        phone: {
+          required: true,
+          minlength: 13,
+          number: true,
+
+        },
+        email: {
+          required: true,
+          email: true
+        },
+      },
+      messages: {
+        phone: "Please enter your phone with only digits",
+        email: "Please enter a valid email address",
+      }
+    });
+
+    /* $('#mobile').on('click', function () {
+      $('#mobile').mouseleave(function () {
+        let mobPhone = document.getElementById('mobile').value
+        let formPhone = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/
+        if (!formPhone.test(mobPhone)) {
+          alert('Please enter correct number')
+        }
+      })
+    })
+    
+    $('#email').on('click', function () {
+      $('#email').mouseleave(function () {
+        let formEmail = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/
+        let email = document.getElementById('email').value
+        if (!formEmail.test(email)) {
+          alert('Please enter correct email')
+        }
+      })
+    }) */
+
+
   });
 
-  $(".news__carousel").slick({
-    dots: true,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    arrows: true,
-  });
-  
-  $(getInTouch).on('click', function () {
-  $('.footer__form__end').toggle()
-})
-
-$(closeForm).on('click', function () {
-  $('.footer__form__end').toggle()
-})
-
-
-$('#mobile').on('click', function () {
-  $('#mobile').mouseleave(function () {
-    let mobPhone = document.getElementById('mobile').value
-    let formPhone = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/
-    if (!formPhone.test(mobPhone)) {
-      alert('Please enter correct number')
-    }
-  })
-})
-
-$('#email').on('click', function () {
-  $('#email').mouseleave(function () {
-    let formEmail = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/
-    let email = document.getElementById('email').value
-    if (!formEmail.test(email)) {
-      alert('Please enter correct email')
-    }
-  })
-})
-});
-
-let galeryPhoto = document.getElementById("sizePhoto")
-let rightBlock = document.getElementById("hidenField")
-let clicker = document.getElementById("galerySizer")
-clicker.onclick = () =>{
-  galeryPhoto.style.width = "750px";
-  galeryPhoto.style.margin = "0 240px";
-  clicker.style.display = "none"
-  rightBlock.style.display = "none"
-}
-galeryPhoto.onclick = () =>{
-  rightBlock.style.display = "grid"
-  clicker.style.display = "block"
-  galeryPhoto.style.margin = "0";
-  galeryPhoto.style.width = "580px"
-}
+  let galeryPhoto = document.getElementById("sizePhoto")
+  let rightBlock = document.getElementById("hidenField")
+  let clicker = document.getElementById("galerySizer")
+  clicker.onclick = () => {
+    galeryPhoto.style.width = "750px";
+    galeryPhoto.style.margin = "0 240px";
+    clicker.style.display = "none"
+    rightBlock.style.display = "none"
+  }
+  galeryPhoto.onclick = () => {
+    rightBlock.style.display = "grid"
+    clicker.style.display = "block"
+    galeryPhoto.style.margin = "0";
+    galeryPhoto.style.width = "580px"
+  }
 
   const marker = new google.maps.Marker({
     position: posit,

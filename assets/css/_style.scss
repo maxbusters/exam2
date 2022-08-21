@@ -4,6 +4,13 @@ script {
 .slider {
     display: flex;
 }
+
+.error {
+    z-index: 3;
+    background-color: red;
+    color: white;
+    position: relative;
+}
 .header {
     position: relative;
     background-image: url(../images/down-layer.png);
@@ -113,6 +120,9 @@ script {
 
     .header__scroll:hover {
         cursor: pointer;
+        .header__scroll--stroke {
+            stroke: orangered;
+        }
     }
 }
 
@@ -138,6 +148,7 @@ script {
         }
 
         &__content {
+            @extend .container;
             display: flex;
             padding: 0px 150px;
             padding-top: 57px;
@@ -230,6 +241,7 @@ script {
         }
 
         .intro__content__second {
+            @extend .container;
             background-image: url("../images/section Vitalii/back2.png");
             background-repeat: no-repeat;
             background-size: 585px 470px;
@@ -245,9 +257,17 @@ script {
     }
 
     .news {
+        @include flex-col;
+        &__container {
+            width: 75%;
+            @include flex-row;
+            justify-content: space-between;
+            align-items: center;
+        }
         background-image: url(../images/background-news.jpg);
         background-repeat: no-repeat;
         background-position-x: center;
+        background-size: cover;
         max-height: 978px;
         position: relative;
         padding: 120px 0;
@@ -275,31 +295,25 @@ script {
 
         }
 
+        .news__arr-left, .news__arr-right {
+            width: 40px;
+            height: 40px;
+            position: relative;
+            z-index: 10;
+        }
+
+        &__arr-left {
+            background-image: url(../images/left.svg);
+
+        }
+        
+        &__arr-right{
+            background-image: url(../images/right.svg);
+        }
+
         &__carousel {
             max-width: 1170px;
             margin: 0 auto;
-
-            .slick-prev,
-            .slick-next {
-                width: 40px;
-                height: 40px;
-            }
-
-            .slick-next {
-                background-image: url(../images/right.svg);
-
-                &::before {
-                    display: none;
-                }
-            }
-
-            .slick-prev {
-                background-image: url(../images/left.svg);
-
-                &::before {
-                    display: none;
-                }
-            }
         }
 
         &__block {
@@ -373,6 +387,7 @@ script {
         }
     }
     .gallery{
+        @include flex-center();
         padding: 150px;
 
         .photo-field{
@@ -435,6 +450,8 @@ script {
     &__bottom {
         background-image: url(../images/Background__footer.png);
         background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
         height: 549px;
         position: relative;
         width: 100%;
@@ -588,6 +605,10 @@ script {
                 .right {
                     display: flex;
 
+                    &__field-cont{
+                        margin-bottom: 33px;
+                    }
+
                     & input[type="text"],
                     & input[type="email"] {
                         outline: none;
@@ -598,7 +619,7 @@ script {
                         background: transparent;
                         height: 41px;
                         width: 310px;
-                        margin-bottom: 33px;
+
                         @include myfont('Montserrat', 400, 18px, 27px, $grey-footer);
                         opacity: 0.5;
                     }
