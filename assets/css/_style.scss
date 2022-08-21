@@ -1,3 +1,9 @@
+script {
+    display: none !important;
+}
+.slider {
+    display: flex;
+}
 .header {
     position: relative;
     background-image: url(../images/down-layer.png);
@@ -80,7 +86,7 @@
         position: relative;
         z-index: 3;
         margin-top: 223px;
-        margin-bottom: 330px;
+        margin-bottom: 240px;
         @include flex-col;
         color: white;
     }
@@ -98,7 +104,15 @@
     }
 
     &__scroll {
-        @include flex-center;
+        @include flex-center();
+        position: relative;
+        z-index: 3;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
+    .header__scroll:hover {
+        cursor: pointer;
     }
 }
 
