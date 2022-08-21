@@ -290,7 +290,36 @@
             }
         }
     }
-    // .gallery {}
+    .gallery{
+        padding: 150px;
+
+        .photo-field{
+            display: flex;
+            margin-bottom: 60px;
+
+            &__left{
+                position: relative;
+
+                &--svg{
+                    position: absolute;
+                    top:45%;
+                    left: 45%;
+
+                }
+            }
+
+            &__right{
+                margin-left: 10px;
+                display: grid;
+                grid-template: repeat(2, 1fr) / repeat(2,1fr);
+                row-gap: 10px;
+                column-gap: 10px;
+            }
+        }
+    }
+    .button-galery{
+        margin: 0 auto;
+    }
 
 }
 
