@@ -177,3 +177,18 @@ function initMap() {
     });
     
 }
+let galeryPhoto = document.getElementById("sizePhoto")
+let rightBlock = document.getElementById("hidenField")
+let clicker = document.getElementById("galerySizer")
+clicker.onclick = () =>{
+  galeryPhoto.style.width = "750px";
+  galeryPhoto.style.margin = "0 200px";
+  clicker.style.display = "none"
+  rightBlock.style.display = "none"
+}
+galeryPhoto.onclick = () =>{
+  rightBlock.style.display = "grid"
+  clicker.style.display = "block"
+  galeryPhoto.style.margin = "0";
+  galeryPhoto.style.width = "580px"
+}

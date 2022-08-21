@@ -300,10 +300,16 @@
             &__left{
                 position: relative;
 
+                & img{
+                    width: 100%;
+                    height: 100%;
+                }
+
                 &--svg{
                     position: absolute;
                     top:45%;
                     left: 45%;
+                    cursor: pointer;
 
                 }
             }
