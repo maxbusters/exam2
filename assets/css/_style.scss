@@ -241,7 +241,7 @@ script {
         }
 
         .intro__content__second {
-            @extend .container;
+            //@extend .container;
             background-image: url("../images/section Vitalii/back2.png");
             background-repeat: no-repeat;
             background-size: 585px 470px;
@@ -387,7 +387,7 @@ script {
         }
     }
     .gallery{
-        @include flex-center();
+        @include flex-col;
         padding: 150px;
 
         .photo-field{
