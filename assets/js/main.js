@@ -182,7 +182,7 @@ let rightBlock = document.getElementById("hidenField")
 let clicker = document.getElementById("galerySizer")
 clicker.onclick = () =>{
   galeryPhoto.style.width = "750px";
-  galeryPhoto.style.margin = "0 200px";
+  galeryPhoto.style.margin = "0 240px";
   clicker.style.display = "none"
   rightBlock.style.display = "none"
 }
