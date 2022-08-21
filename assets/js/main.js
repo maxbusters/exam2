@@ -304,8 +304,7 @@ function initMap() {
       prevArrow: $('.news__arr-left'),
       nextArrow: $('.news__arr-right'),
       arrows: true,
-      adaptiveHeight: true,
-    adaptiveWidth: true,
+      
       responsive: [
         {
           breakpoint: 1500,
