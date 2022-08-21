@@ -1,5 +1,6 @@
 var map;
 function initMap() {
+
   const posit = { lat: 40.67897386523779, lng: -73.91130041895276 }
   map = new google.maps.Map(document.getElementById('map'), {
     center: {
@@ -288,7 +289,43 @@ $(document).ready(function () {
     }
   });
 
+  $(".news__carousel").slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    arrows: true,
+  });
+  
+  $(getInTouch).on('click', function () {
+  $('.footer__form__end').toggle()
+})
 
+$(closeForm).on('click', function () {
+  $('.footer__form__end').toggle()
+})
+
+
+$('#mobile').on('click', function () {
+  $('#mobile').mouseleave(function () {
+    let mobPhone = document.getElementById('mobile').value
+    let formPhone = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/
+    if (!formPhone.test(mobPhone)) {
+      alert('Please enter correct number')
+    }
+  })
+})
+
+$('#email').on('click', function () {
+  $('#email').mouseleave(function () {
+    let formEmail = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/
+    let email = document.getElementById('email').value
+    if (!formEmail.test(email)) {
+      alert('Please enter correct email')
+    }
+  })
+})
 });
 
 let galeryPhoto = document.getElementById("sizePhoto")
@@ -330,32 +367,3 @@ galeryPhoto.onclick = () =>{
 
 const getInTouch = document.getElementsByClassName('footer__form__start')
 const closeForm = document.getElementsByClassName('footer__form__end__close')
-
-$(getInTouch).on('click', function () {
-  $('.footer__form__end').toggle()
-})
-
-$(closeForm).on('click', function () {
-  $('.footer__form__end').toggle()
-})
-
-
-$('#mobile').on('click', function () {
-  $('#mobile').mouseleave(function () {
-    let mobPhone = document.getElementById('mobile').value
-    let formPhone = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/
-    if (!formPhone.test(mobPhone)) {
-      alert('Please enter correct number')
-    }
-  })
-})
-
-$('#email').on('click', function () {
-  $('#email').mouseleave(function () {
-    let formEmail = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/
-    let email = document.getElementById('email').value
-    if (!formEmail.test(email)) {
-      alert('Please enter correct email')
-    }
-  })
-})
