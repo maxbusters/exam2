@@ -530,4 +530,7 @@ function newSliderHandler() {
     arrows: true,
   });
 }
-newSliderHandler();
+
+$(document).ready(function () {
+  newSliderHandler();
+});
