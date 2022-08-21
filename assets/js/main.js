@@ -300,21 +300,12 @@ function initMap() {
       infinite: true,
       speed: 300,
       slidesToShow: 3,
-      slidesToScroll: 3,
-      prevArrow: $('.news__arr-left'),
-      nextArrow: $('.news__arr-right'),
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      prevArrow: $('.news__arrows-left'),
+      nextArrow: $('.news__arrows-right'),
       arrows: true,
-      
-      responsive: [
-        {
-          breakpoint: 1500,
-          settings: {
-            arrows: false,
-            slidesToShow: 2,
-            slidesToScroll: 2,
-          }
-        },
-      ]
     });
 
     $(getInTouch).on('click', function () {
