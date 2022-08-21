@@ -295,19 +295,6 @@ function initMap() {
       }
     });
 
-    $(".news__carousel").slick({
-      dots: true,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 4000,
-      prevArrow: $('.news__arrows-left'),
-      nextArrow: $('.news__arrows-right'),
-      arrows: true,
-    });
-
     $(getInTouch).on('click', function () {
       $('.footer__form__end').toggle()
     })
@@ -528,3 +515,19 @@ function initMap() {
 
 const getInTouch = document.getElementsByClassName('footer__form__start')
 const closeForm = document.getElementsByClassName('footer__form__end__close')
+
+function newSliderHandler() {
+  $(".news__carousel").slick({
+    dots: true,
+    infinite: true,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 4000,
+    prevArrow: $('.news__arrows-left'),
+    nextArrow: $('.news__arrows-right'),
+    arrows: true,
+  });
+}
+newSliderHandler();
