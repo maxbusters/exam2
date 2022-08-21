@@ -1,18 +1,38 @@
 var map;
 function initMap() {
-  const posit = { lat: 40.699124288249635, lng: -73.8577954995236 }
+  const posit = { lat: 40.67897386523779, lng: -73.91130041895276 }
   map = new google.maps.Map(document.getElementById('map'), {
     center: {
       lat: 40.6677641312532,
       lng: -73.90124039178546,
     },
-    zoom: 12,
+
+    zoom: 13,
+    disableDefaultUI: true,
     styles: [
+      {
+        "stylers": [
+          {
+            "visibility": "on"
+          }
+        ]
+      },
       {
         "elementType": "geometry",
         "stylers": [
           {
             "color": "#f5f5f5"
+          }
+        ]
+      },
+      {
+        "elementType": "geometry.fill",
+        "stylers": [
+          {
+            "lightness": 100
+          },
+          {
+            "weight": 1.5
           }
         ]
       },
@@ -29,6 +49,12 @@ function initMap() {
         "stylers": [
           {
             "color": "#616161"
+          },
+          {
+            "lightness": 45
+          },
+          {
+            "weight": 1
           }
         ]
       },
@@ -42,10 +68,28 @@ function initMap() {
       },
       {
         "featureType": "administrative.land_parcel",
+        "elementType": "labels",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "administrative.land_parcel",
         "elementType": "labels.text.fill",
         "stylers": [
           {
             "color": "#bdbdbd"
+          }
+        ]
+      },
+      {
+        "featureType": "landscape",
+        "elementType": "geometry.fill",
+        "stylers": [
+          {
+            "lightness": -5
           }
         ]
       },
@@ -68,11 +112,29 @@ function initMap() {
         ]
       },
       {
+        "featureType": "poi.business",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
         "featureType": "poi.park",
         "elementType": "geometry",
         "stylers": [
           {
             "color": "#e5e5e5"
+          }
+        ]
+      },
+      {
+        "featureType": "poi.park",
+
+        "elementType": "labels.text",
+        "stylers": [
+          {
+            "visibility": "off"
           }
         ]
       },
@@ -96,6 +158,14 @@ function initMap() {
       },
       {
         "featureType": "road.arterial",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "road.arterial",
         "elementType": "labels.text.fill",
         "stylers": [
           {
@@ -114,10 +184,36 @@ function initMap() {
       },
       {
         "featureType": "road.highway",
+        "elementType": "labels",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "road.highway",
         "elementType": "labels.text.fill",
         "stylers": [
           {
             "color": "#616161"
+          }
+        ]
+      },
+      {
+        "featureType": "road.local",
+        "stylers": [
+          {
+            "visibility": "off"
+          }
+        ]
+      },
+      {
+        "featureType": "road.local",
+        "elementType": "labels",
+        "stylers": [
+          {
+            "visibility": "off"
           }
         ]
       },
@@ -159,6 +255,15 @@ function initMap() {
       },
       {
         "featureType": "water",
+        "elementType": "geometry.fill",
+        "stylers": [
+          {
+            "lightness": 60
+          }
+        ]
+      },
+      {
+        "featureType": "water",
         "elementType": "labels.text.fill",
         "stylers": [
           {
@@ -168,15 +273,6 @@ function initMap() {
       }
     ]
   });
-
-  const marker = new google.maps.Marker({
-    position: posit,
-    map: map,
-    icon: 'assets/images/Pin.png',
-    title: "91 Nolan Extensions Suite 670",
-  });
-
-}
 
 $(document).ready(function () {
   $(".header__anchor").on('click', function (event) {
@@ -194,3 +290,56 @@ $(document).ready(function () {
 
 
 });
+
+  const marker = new google.maps.Marker({
+    position: posit,
+    map: map,
+    icon: 'assets/images/Pin.png',
+    title: "91 Nolan Extensions Suite 670",
+
+  });
+
+
+  marker.addListener("mouseover", toggleBounce);
+
+  function toggleBounce() {
+    if (marker.getAnimation() !== null) {
+      marker.setAnimation(null);
+    } else {
+      marker.setAnimation(google.maps.Animation.BOUNCE);
+    }
+
+  }
+}
+
+const getInTouch = document.getElementsByClassName('footer__form__start')
+const closeForm = document.getElementsByClassName('footer__form__end__close')
+
+$(getInTouch).on('click', function () {
+  $('.footer__form__end').toggle()
+})
+
+$(closeForm).on('click', function () {
+  $('.footer__form__end').toggle()
+})
+
+
+$('#mobile').on('click', function () {
+  $('#mobile').mouseleave(function () {
+    let mobPhone = document.getElementById('mobile').value
+    let formPhone = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/
+    if (!formPhone.test(mobPhone)) {
+      alert('Please enter correct number')
+    }
+  })
+})
+
+$('#email').on('click', function () {
+  $('#email').mouseleave(function () {
+    let formEmail = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/
+    let email = document.getElementById('email').value
+    if (!formEmail.test(email)) {
+      alert('Please enter correct email')
+    }
+  })
+})
