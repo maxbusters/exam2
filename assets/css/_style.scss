@@ -468,7 +468,7 @@
                 .right {
                     display: flex;
 
-                    & input[type="tel"],
+                    & input[type="text"],
                     & input[type="email"] {
                         outline: none;
                         display: block;
@@ -483,7 +483,7 @@
                         opacity: 0.5;
                     }
 
-                    & input[type="tel"]:focus,
+                    & input[type="text"]:focus,
                     & input[type="email"]:focus {
                         opacity: 1;
                         color: $black;
