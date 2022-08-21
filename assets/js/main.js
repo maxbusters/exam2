@@ -6,6 +6,7 @@ function initMap() {
       lat: 40.6677641312532,
       lng: -73.90124039178546,
     },
+
     zoom: 13,
     disableDefaultUI: true,
     styles: [
@@ -129,6 +130,7 @@ function initMap() {
       },
       {
         "featureType": "poi.park",
+
         "elementType": "labels.text",
         "stylers": [
           {
@@ -272,6 +274,23 @@ function initMap() {
     ]
   });
 
+$(document).ready(function () {
+  $(".header__anchor").on('click', function (event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function () {
+        window.location.hash = hash;
+      });
+    }
+  });
+
+
+});
+
   const marker = new google.maps.Marker({
     position: posit,
     map: map,
@@ -324,6 +343,3 @@ $('#email').on('click', function () {
     }
   })
 })
-
-
-
