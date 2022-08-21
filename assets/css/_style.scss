@@ -1,3 +1,9 @@
+script {
+    display: none !important;
+}
+.slider {
+    display: flex;
+}
 .header {
     position: relative;
     background-image: url(../images/down-layer.png);
@@ -8,6 +14,7 @@
     &__bg {
         position: absolute;
         width: 100%;
+        height: 100%;
         z-index: 0;
     }
 
@@ -76,8 +83,10 @@
     }
 
     &__center-wrap {
+        position: relative;
+        z-index: 3;
         margin-top: 223px;
-        margin-bottom: 330px;
+        margin-bottom: 240px;
         @include flex-col;
         color: white;
     }
@@ -92,6 +101,18 @@
         @include monserat(700);
         @include font-sizes(18px, 22px);
         letter-spacing: 0.3em;
+    }
+
+    &__scroll {
+        @include flex-center();
+        position: relative;
+        z-index: 3;
+        margin: 0 auto;
+        margin-bottom: 50px;
+    }
+
+    .header__scroll:hover {
+        cursor: pointer;
     }
 }
 
@@ -118,7 +139,7 @@
 
         &__content {
             display: flex;
-            padding: 0px 215px;
+            padding: 0px 150px;
             padding-top: 57px;
             background-image: url("../images/section Vitalii/back.png");
             background-repeat: no-repeat;
@@ -147,7 +168,7 @@
                 &--text {
                     @include myfont($open, 400, 18px, 30px, #2C4058);
                     margin-bottom: 40px;
-                    max-width: 470px;
+                    max-width: 490px;
                 }
 
                 &--button {
@@ -156,6 +177,18 @@
                     height: 50px;
                     margin-bottom: 60px;
 
+                    &:hover{
+                        background-color: rgba(255, 51, 0, 0.7);
+                        border:none;
+                        text-shadow: 
+                        0 0 7px #fff,
+                        0 0 10px #fff,
+                        0 0 21px #0fa,
+                        0 0 42px #0fa,
+                        0 0 82px #0fa,
+                        0 0 92px #0fa,
+                        0 0 102px #0fa,
+                    }
 
                     a {
                         width: 100%;
@@ -166,30 +199,31 @@
                         @include myfont($monserat, 400, 14px, 17px, #000000);
                         cursor: pointer;
 
-                        &:hover {
-                            background-color: rgb(255, 51, 0);
-                        }
+                    }
+                }
+                &--link a::before{
+                    content: url("../images/section\ Vitalii/target.png");
+                   
+                    margin-right: 10px;
+                    
+                }
 
-                        a {
-                            width: 100%;
-                            height: 100%;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            @include myfont($monserat, 400, 14px, 17px, #000000);
-                            cursor: pointer;
+                &--link a {
+                    @include myfont($open, 400, 15px, 23px, black);
+                    font-style: italic;
 
-                        }
+                    &:hover {
+                        color: rgba(255, 51, 0, 0.7);
+                        text-shadow: 
+                            0 0 7px #fff,
+                            0 0 10px #fff,
+                            0 0 21px #0fa,
+                            0 0 42px #0fa,
+                            0 0 82px #0fa,
+                            0 0 92px #0fa,
+                            0 0 102px #0fa,
                     }
 
-                    &--link {
-                        @include myfont($open, 400, 15px, 23px, black);
-
-                        &:hover a {
-                            color: rgb(255, 51, 0);
-                        }
-
-                    }
                 }
 
             }
@@ -200,6 +234,7 @@
             background-repeat: no-repeat;
             background-size: 585px 470px;
             background-position: top right;
+            margin-bottom: 0px;
         }
 
         .second-img {
@@ -337,27 +372,264 @@
             }
         }
     }
+    .gallery{
+        padding: 150px;
 
-    // .gallery {}
+        .photo-field{
+            display: flex;
+            margin-bottom: 60px;
 
+            &__left{
+                position: relative;
 
+                & img{
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &--svg{
+                    position: absolute;
+                    top:45%;
+                    left: 45%;
+                    cursor: pointer;
+
+                }
+            }
+
+            &__right{
+                margin-left: 10px;
+                display: grid;
+                grid-template: repeat(2, 1fr) / repeat(2,1fr);
+                row-gap: 10px;
+                column-gap: 10px;
+            }
+        }
+    }
+    .button-galery{
+        margin: 0 auto;
+    }
 }
+
 .footer {
-    &__contacts {
-        background-image: url(../images/down-layer.png);
+
+    &__map {
+        a[href^="http://maps.google.com/maps"] {
+            display: none !important
+        }
+
+        a[href^="https://maps.google.com/maps"] {
+            display: none !important
+        }
+
+        .gmnoprint a,
+        .gmnoprint span,
+        .gm-style-cc {
+            display: none;
+        }
+
+        .gmnoprint div {
+            background: none !important;
+        }
+    }
+
+    &__bottom {
+        background-image: url(../images/Background__footer.png);
+        background-repeat: no-repeat;
         height: 549px;
+        position: relative;
+        width: 100%;
+    }
+
+    &__contacts {
+        padding-left: 415px;
+        padding-right: 415px;
+        padding-top: 59px;
+
+
+        &__copyrights {
+            @include myfont('Montserrat', 400, 14px, 17px, $white);
+            margin-top: 41px;
+        }
+
+        &__wrapp {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
         &__social {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
             .social__wrapper {
                 border: 1px solid white;
                 border-radius: 50%;
                 height: 40px;
                 width: 40px;
+                position: relative;
+                margin-right: 20px;
+
+                &:hover {
+                    background-color: white;
+                }
+
+                &:hover .social__svg--hov {
+                    opacity: 1;
+                }
+
             }
 
             .social__svg {
-                height: 100%;
                 width: 100%;
+                height: 100%;
+                position: absolute;
+
+                &--hov {
+                    opacity: 0;
+                }
+
+
+                &--facebook {
+                    right: -13px;
+                    top: 10px;
+                }
+            }
+        }
+    }
+
+    &__form {
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+
+
+        &__start {
+            @include myfont('Montserrat', 700, 24px, 34px, $white);
+            padding: 30px 200px;
+            cursor: pointer;
+
+            &:hover {
+                color: $dark-blue;
+            }
+        }
+
+        &__end {
+            display: none;
+            padding: 60px 60px 68px 60px;
+            max-width: 770px;
+            max-height: 450px;
+            background-color: $white;
+            position: absolute;
+            z-index: 1;
+            bottom: 400px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+            &__close {
+                color: $light-grey;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+                cursor: pointer;
+            }
+
+            &__bg {
+                background-image: url(../images/city__bg__footer.png);
+                background-repeat: no-repeat;
+                position: absolute;
+                width: 100%;
+                height: 197px;
+                left: 0;
+                top: 253px;
+                z-index: -1;
+            }
+
+            &__line {
+                border-bottom: 1px solid $dark-blue;
+                width: 100px;
+                margin: 0px 275px;
+            }
+
+            &__header {
+                @include myfont('Montserrat', 700, 44px, 54px, $dark-blue);
+                margin: 0px 150px;
+                margin-top: 30px;
+                margin-bottom: 42px;
+            }
+
+            &__contacts {
+                display: flex;
+                justify-content: space-between;
+
+                .left {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    @include myfont('Montserrat', 400, 18px, 27px, $black);
+                    height: 196px;
+                    width: 286px;
+
+                    & a {
+                        @include myfont('Montserrat', 400, 18px, 27px, $black);
+                    }
+
+                    &__link:hover {
+                        color: $blue;
+                    }
+
+                    &__link__icon {
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 28px;
+                        color: $violet;
+                    }
+                }
+
+                .right {
+                    display: flex;
+
+                    & input[type="text"],
+                    & input[type="email"] {
+                        outline: none;
+                        display: block;
+                        padding-bottom: 14px;
+                        border: none;
+                        border-bottom: 1px solid $dark-blue;
+                        background: transparent;
+                        height: 41px;
+                        width: 310px;
+                        margin-bottom: 33px;
+                        @include myfont('Montserrat', 400, 18px, 27px, $grey-footer);
+                        opacity: 0.5;
+                    }
+
+                    & input[type="text"]:focus,
+                    & input[type="email"]:focus {
+                        opacity: 1;
+                        color: $black;
+                        border-color: $black;
+                    }
+
+                    &__btn {
+                        border: 1px solid $dark-blue;
+                        @include myfont('Montserrat', 400, 18px, 27px, $black);
+                        padding: 11px 34px;
+                        max-width: 140px;
+                        background-color: $white;
+                        cursor: pointer;
+                        position: absolute;
+                        right: 60px;
+
+                        &:hover {
+                            background-color: $blue;
+                            border-color: $white;
+                            color: $white;
+                        }
+                    }
+
+                }
+
+
             }
         }
     }
