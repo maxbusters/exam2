@@ -235,7 +235,6 @@ script {
 }
 .main .intro__content {
   display: flex;
-  padding: 0px 150px;
   padding-top: 57px;
   background-image: url("../images/sectionVitalii/back.png");
   background-repeat: no-repeat;
@@ -315,7 +314,7 @@ script {
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #0fa, 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa;
 }
 .main .intro .intro__content__second {
-  background-image: url("../images/section Vitalii/back2.png");
+  background-image: url("../images/sectionVitalii/back2.png");
   background-repeat: no-repeat;
   background-size: 585px 470px;
   background-position: top right;
