@@ -261,7 +261,6 @@ script {
         &__container {
             width: 75%;
             @include flex-row;
-            justify-content: space-between;
             align-items: center;
         }
         background-image: url(../images/background-news.jpg);

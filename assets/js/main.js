@@ -301,9 +301,21 @@ function initMap() {
       speed: 300,
       slidesToShow: 3,
       slidesToScroll: 3,
-      prevArrow: $('.news__arr-left'), 
+      prevArrow: $('.news__arr-left'),
       nextArrow: $('.news__arr-right'),
       arrows: true,
+      adaptiveHeight: true,
+    adaptiveWidth: true,
+      responsive: [
+        {
+          breakpoint: 1500,
+          settings: {
+            arrows: false,
+            slidesToShow: 2,
+            slidesToScroll: 2,
+          }
+        },
+      ]
     });
 
     $(getInTouch).on('click', function () {
@@ -357,134 +369,134 @@ function initMap() {
 
   });
 
-let galeryPhoto = document.getElementById("sizePhoto")
-let rightBlockGalery = document.getElementById("hidenField")
-let clicker = document.getElementById("galerySizer")
-let clicker2 = document.getElementById("galerySizer2")
-let clicker3 = document.getElementById("galerySizer3")
-let clicker4 = document.getElementById("galerySizer4")
-let clicker5 = document.getElementById("galerySize5")
-let leftBlock = document.getElementById("leftBlock")
-let galeryPhoto2 = document.getElementById("sizePhoto2")
-let galeryPhoto3 = document.getElementById("sizePhoto3")
-let galeryPhoto4 = document.getElementById("sizePhoto4")
-let galeryPhoto5 = document.getElementById("sizePhoto5")
-// first photo
-clicker.onclick = () =>{
-  galeryPhoto.style.width = "750px";
-  clicker.style.display = "none"
-  rightBlockGalery.style.display = "none";
-  leftBlock.style.cssText =`
+  let galeryPhoto = document.getElementById("sizePhoto")
+  let rightBlockGalery = document.getElementById("hidenField")
+  let clicker = document.getElementById("galerySizer")
+  let clicker2 = document.getElementById("galerySizer2")
+  let clicker3 = document.getElementById("galerySizer3")
+  let clicker4 = document.getElementById("galerySizer4")
+  let clicker5 = document.getElementById("galerySize5")
+  let leftBlock = document.getElementById("leftBlock")
+  let galeryPhoto2 = document.getElementById("sizePhoto2")
+  let galeryPhoto3 = document.getElementById("sizePhoto3")
+  let galeryPhoto4 = document.getElementById("sizePhoto4")
+  let galeryPhoto5 = document.getElementById("sizePhoto5")
+  // first photo
+  clicker.onclick = () => {
+    galeryPhoto.style.width = "750px";
+    clicker.style.display = "none"
+    rightBlockGalery.style.display = "none";
+    leftBlock.style.cssText = `
   width:100%;
   display:flex;
   justify-content:center;
   `
-}
-galeryPhoto.onclick = () =>{
-  rightBlockGalery.style.display = "grid"
-  clicker.style.display = "block"
-  galeryPhoto.style.margin = "0";
-  galeryPhoto.style.width = "580px"
-  leftBlock.style.cssText =`
+  }
+  galeryPhoto.onclick = () => {
+    rightBlockGalery.style.display = "grid"
+    clicker.style.display = "block"
+    galeryPhoto.style.margin = "0";
+    galeryPhoto.style.width = "580px"
+    leftBlock.style.cssText = `
   width:auto;
   `
-}
-// second photo
-clicker2.onclick = () =>{
-  galeryPhoto2.style.width ="750px"
-  leftBlock.style.display =" none"
-  clicker2.style.display = "none"
-  galeryPhoto3.style.display =" none"
-  galeryPhoto4.style.display =" none"
-  galeryPhoto5.style.display =" none"
-  rightBlockGalery.style.cssText =`
+  }
+  // second photo
+  clicker2.onclick = () => {
+    galeryPhoto2.style.width = "750px"
+    leftBlock.style.display = " none"
+    clicker2.style.display = "none"
+    galeryPhoto3.style.display = " none"
+    galeryPhoto4.style.display = " none"
+    galeryPhoto5.style.display = " none"
+    rightBlockGalery.style.cssText = `
   width:100%;
   display:flex;
   justify-content:center;
   `
-}
-  galeryPhoto2.onclick = () =>{
-  leftBlock.style.display ="block"
-  galeryPhoto2.style.width= "285px"
-  galeryPhoto3.style.display =" block"
-  galeryPhoto4.style.display =" block"
-  galeryPhoto5.style.display =" block"
-  rightBlockGalery.style.cssText =`
+  }
+  galeryPhoto2.onclick = () => {
+    leftBlock.style.display = "block"
+    galeryPhoto2.style.width = "285px"
+    galeryPhoto3.style.display = " block"
+    galeryPhoto4.style.display = " block"
+    galeryPhoto5.style.display = " block"
+    rightBlockGalery.style.cssText = `
   display:grid;
   width:auto;`
-  clicker2.style.display = "block"
-}
-// thiry photo
-  clicker3.onclick = () =>{
-  galeryPhoto3.style.width ="750px"
-  leftBlock.style.display =" none"
-  clicker3.style.display = "none"
-  galeryPhoto2.style.display =" none"
-  galeryPhoto4.style.display =" none"
-  galeryPhoto5.style.display =" none"
-  rightBlockGalery.style.cssText =`
+    clicker2.style.display = "block"
+  }
+  // thiry photo
+  clicker3.onclick = () => {
+    galeryPhoto3.style.width = "750px"
+    leftBlock.style.display = " none"
+    clicker3.style.display = "none"
+    galeryPhoto2.style.display = " none"
+    galeryPhoto4.style.display = " none"
+    galeryPhoto5.style.display = " none"
+    rightBlockGalery.style.cssText = `
   width:100%;
   display:flex;
   justify-content:center;
   `
-}
-  galeryPhoto3.onclick = () =>{
-    galeryPhoto3.style.width ="285px"
-    leftBlock.style.display ="block"
-    galeryPhoto4.style.display =" block"
-    galeryPhoto5.style.display =" block"
-    galeryPhoto2.style.display =" block"
-    rightBlockGalery.style.cssText =`
+  }
+  galeryPhoto3.onclick = () => {
+    galeryPhoto3.style.width = "285px"
+    leftBlock.style.display = "block"
+    galeryPhoto4.style.display = " block"
+    galeryPhoto5.style.display = " block"
+    galeryPhoto2.style.display = " block"
+    rightBlockGalery.style.cssText = `
    display:grid;
     width:auto;`
     clicker3.style.display = "block"
   }
   // four photo
-  clicker4.onclick = () =>{
-    galeryPhoto4.style.width ="750px"
-    leftBlock.style.display =" none"
+  clicker4.onclick = () => {
+    galeryPhoto4.style.width = "750px"
+    leftBlock.style.display = " none"
     clicker4.style.display = "none"
-    galeryPhoto2.style.display =" none"
-    galeryPhoto3.style.display =" none"
-    galeryPhoto5.style.display =" none"
-    rightBlockGalery.style.cssText =`
+    galeryPhoto2.style.display = " none"
+    galeryPhoto3.style.display = " none"
+    galeryPhoto5.style.display = " none"
+    rightBlockGalery.style.cssText = `
     width:100%;
     display:flex;
     justify-content:center;
     `
   }
-  galeryPhoto4.onclick = () =>{
-    galeryPhoto4.style.width ="285px"
-    leftBlock.style.display ="block"
-    galeryPhoto3.style.display =" block"
-    galeryPhoto5.style.display =" block"
-    galeryPhoto2.style.display =" block"
-    rightBlockGalery.style.cssText =`
+  galeryPhoto4.onclick = () => {
+    galeryPhoto4.style.width = "285px"
+    leftBlock.style.display = "block"
+    galeryPhoto3.style.display = " block"
+    galeryPhoto5.style.display = " block"
+    galeryPhoto2.style.display = " block"
+    rightBlockGalery.style.cssText = `
    display:grid;
     width:auto;`
     clicker4.style.display = "block"
   }
   // five photo
-  clicker5.onclick = () =>{
-    galeryPhoto5.style.width ="750px"
-    leftBlock.style.display =" none"
+  clicker5.onclick = () => {
+    galeryPhoto5.style.width = "750px"
+    leftBlock.style.display = " none"
     clicker5.style.display = "none"
-    galeryPhoto2.style.display =" none"
-    galeryPhoto3.style.display =" none"
-    galeryPhoto4.style.display =" none"
-    rightBlockGalery.style.cssText =`
+    galeryPhoto2.style.display = " none"
+    galeryPhoto3.style.display = " none"
+    galeryPhoto4.style.display = " none"
+    rightBlockGalery.style.cssText = `
     width:100%;
     display:flex;
     justify-content:center;
     `
   }
-  galeryPhoto5.onclick = () =>{
-    galeryPhoto5.style.width ="285px"
-    leftBlock.style.display ="block"
-    galeryPhoto3.style.display =" block"
-    galeryPhoto4.style.display =" block"
-    galeryPhoto2.style.display =" block"
-    rightBlockGalery.style.cssText =`
+  galeryPhoto5.onclick = () => {
+    galeryPhoto5.style.width = "285px"
+    leftBlock.style.display = "block"
+    galeryPhoto3.style.display = " block"
+    galeryPhoto4.style.display = " block"
+    galeryPhoto2.style.display = " block"
+    rightBlockGalery.style.cssText = `
    display:grid;
     width:auto;`
     clicker5.style.display = "block"
@@ -500,7 +512,7 @@ clicker2.onclick = () =>{
   //   width:auto;`
   //   clicker5.style.display = "block"
   // }
-  
+
 
 
   const marker = new google.maps.Marker({
