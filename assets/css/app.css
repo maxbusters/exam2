@@ -178,6 +178,7 @@ script {
   margin-top: 223px;
   margin-bottom: 240px;
   color: white;
+  margin-left: -37px;
 }
 .header__slide {
   text-align: center;
@@ -189,6 +190,20 @@ script {
   align-items: center;
   right: 0;
   width: 10px;
+}
+.header__slider .slick-dots li.slick-active button:before {
+  color: #fff;
+  font-size: 10px;
+  opacity: 1;
+}
+.header__slider .slick-dots li:not(.slick-active) button:before {
+  content: "";
+  background-image: url(../images/dot-empty.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.header__slider .slick-dots li + li {
+  margin-top: 40px;
 }
 .header__title {
   font-family: "Montserrat", sans-serif;
