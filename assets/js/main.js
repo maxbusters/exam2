@@ -277,6 +277,85 @@ function initMap() {
 
   $(document).ready(function () {
 
+    const marker = new google.maps.Marker({
+      position: posit,
+      map: map,
+      icon: 'assets/images/Pin.png',
+      title: "91 Nolan Extensions Suite 670",
+
+    });
+
+    const markerNYC = new google.maps.Marker({
+      position: {
+        lat: 40.71293166574816, lng: -74.01338707331429
+      },
+      map: map,
+      icon: 'assets/images/Pin.png',
+      title: "ONE WORLD TRADE CENTER, NEW YORK CITY",
+
+    });
+
+    const markerHK = new google.maps.Marker({
+      position: {
+        lat: 22.303611634975077, lng: 114.16019069807784
+      },
+      map: map,
+      icon: 'assets/images/Pin.png',
+      title: "INTERNATIONAL COMMERCE CENTRE, HONG KONG",
+
+    });
+
+    $('#HKAdress').on('click', function () {
+      var center = new google.maps.LatLng(22.303611634975077, 114.16019069807784);
+      map.panTo(center);
+
+      $("#HKAdress").on('click', function (event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function () {
+            window.location.hash = hash;
+          });
+        }
+      });
+    })
+
+    $('#NYCAdress').on('click', function () {
+      var center = new google.maps.LatLng(40.71293166574816,-74.01338707331429);
+      map.panTo(center);
+
+      $("#NYCAdress").on('click', function (event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function () {
+            window.location.hash = hash;
+          });
+        }
+      });
+    })
+
+    $('#mainAdress').on('click', function(){
+      var center = new google.maps.LatLng(40.6677641312532,-73.90124039178546);
+      map.panTo(center);
+      toggleBounce()
+    })
+
+    function toggleBounce() {
+      if (marker.getAnimation() == null) {
+        marker.setAnimation(google.maps.Animation.BOUNCE);
+      } else {
+        marker.setAnimation(null);
+      }
+
+    }
+
     $.validator.setDefaults({
       debug: true,
       success: "valid"
@@ -306,44 +385,38 @@ function initMap() {
 
     $("#form-contact").validate({
       rules: {
-        phone: {
+        name: {
           required: true,
-          minlength: 13,
-          number: true,
-
-        },
-        email: {
-          required: true,
-          email: true
-        },
+          minlength: 2,
+          withTwoStrings: true,
+        }
       },
       messages: {
-        phone: "Please enter your phone with only digits",
+        name: {
+          required: "We need your name to contact you",
+          minlength: jQuery.validator.format("At least {0} characters required!")
+        },
         email: "Please enter a valid email address",
       }
     });
 
-    /* $('#mobile').on('click', function () {
-      $('#mobile').mouseleave(function () {
-        let mobPhone = document.getElementById('mobile').value
-        let formPhone = /\(?([0-9]{3})\)?([ .-]?)([0-9]{3})\2([0-9]{4})/
-        if (!formPhone.test(mobPhone)) {
-          alert('Please enter correct number')
-        }
-      })
-    })
-    
-    $('#email').on('click', function () {
-      $('#email').mouseleave(function () {
-        let formEmail = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/
-        let email = document.getElementById('email').value
-        if (!formEmail.test(email)) {
-          alert('Please enter correct email')
-        }
-      })
-    }) */
+    jQuery.validator.addMethod(
+      "withTwoStrings",
+      function (value, e) {
+        howManyWords = value.trim();
+        howManyWords = howManyWords.replace(/\s{2,}/g, ' ');
+        howManyWords = howManyWords.split(' ');
 
-
+        if (howManyWords.length == 2) {
+          return true;
+        }
+        else {
+          return false;
+        }
+        e.preventDefault();
+      },
+      "Please include First and Last name"
+    );
   });
 
   let galeryPhoto = document.getElementById("sizePhoto")
@@ -489,28 +562,6 @@ function initMap() {
   //   width:auto;`
   //   clicker5.style.display = "block"
   // }
-
-
-
-  const marker = new google.maps.Marker({
-    position: posit,
-    map: map,
-    icon: 'assets/images/Pin.png',
-    title: "91 Nolan Extensions Suite 670",
-
-  });
-
-
-  marker.addListener("mouseover", toggleBounce);
-
-  function toggleBounce() {
-    if (marker.getAnimation() !== null) {
-      marker.setAnimation(null);
-    } else {
-      marker.setAnimation(google.maps.Animation.BOUNCE);
-    }
-
-  }
 }
 
 const getInTouch = document.getElementsByClassName('footer__form__start')

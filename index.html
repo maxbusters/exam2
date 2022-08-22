@@ -147,7 +147,7 @@
                         <a href="#">MORE DETAILS</a>
                     </div>
                     <div class="intro__content--txt--link">
-                        <a href="#"><i> New York City, United States - 1776 feet</i></a>
+                        <a id="NYCAdress" href="#map"><i> New York City, United States - 1776 feet</i></a>
                     </div>
                 </div>
             </div>
@@ -163,7 +163,7 @@
                         <a href="#">MORE DETAILS</a>
                     </div>
                     <div class="intro__content--txt--link">
-                        <a href="#"><i> Hong Kong - 1588 feet</i></a>
+                        <a id="HKAdress" href="#map"><i> Hong Kong - 1588 feet</i></a>
                     </div>
                 </div>
                 <div class="intro__content--img second-img"><img src="assets/images/sectionVitalii/picture2.png"
@@ -396,13 +396,12 @@
                     </p>
                     <div class="footer__form__end__contacts">
                         <div class="left">
-                            <a class="left__link" href="https://goo.gl/maps/SbxiqnYHiA2xmxDBA" target="_blank"
-                                rel="noopener noreferrer">
+                            <div class="left__link" id = "mainAdress">
                                 <span class="left__link__icon">
                                     <i class="fa-solid fa-location-dot"></i>
                                 </span>
                                 91 Nolan Extensions Suite 670
-                            </a>
+                            </div>
                             <a class="left__link" href="tel:+001 356-868-2454">
                                 <span class="left__link__icon">
                                     <i class="fa-solid fa-phone"></i>
@@ -425,7 +424,7 @@
                         <div class="right">
                             <form action="github.com" method="post" id="form-contact" novalidate="novalidate">
                                 <div class="right__field-cont">
-                                    <input id="phone" type="text" name="phone" placeholder="Enter a phone number" />
+                                    <input id="name" type="text" name="name" placeholder="Enter your First and Last name" minlength="2" required/>
                                 </div>
                                 <div class="right__field-cont">
                                     <input type="email" name="email" placeholder="Email" id="email" />
