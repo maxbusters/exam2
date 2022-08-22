@@ -333,17 +333,16 @@ script {
   background-repeat: no-repeat;
   background-position-x: center;
   background-size: cover;
-  max-height: 978px;
   position: relative;
-  padding: 120px 0;
+  padding: 150px 0 170px;
 }
 .main .news__container {
-  width: 75%;
+  width: 1200px;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 .main .news__title {
   font-family: "Montserrat", sans-serif;
@@ -365,27 +364,48 @@ script {
   right: calc(50% - 20px);
   margin: -30px;
 }
-.main .news .news__arr-left, .main .news .news__arr-right {
+.main .news .news__arrows-left,
+.main .news .news__arrows-right {
   width: 40px;
   height: 40px;
-  position: relative;
+  position: absolute;
   z-index: 10;
+  top: 50%;
 }
-.main .news__arr-left {
+.main .news__arrows-left {
   background-image: url(../images/left.svg);
+  left: -7%;
 }
-.main .news__arr-right {
+.main .news__arrows-right {
   background-image: url(../images/right.svg);
+  right: -7%;
+}
+.main .news .slick-dots {
+  bottom: -65px;
+}
+.main .news .slick-dots li.slick-active button:before {
+  color: #fff;
+  font-size: 10px;
+  opacity: 1;
+}
+.main .news .slick-dots li:not(.slick-active) button:before {
+  content: "";
+  background-image: url(../images/dot-empty.svg);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .main .news__carousel {
-  max-width: 1170px;
+  max-width: 1200px;
   margin: 0 auto;
+  width: 100%;
 }
 .main .news__block {
   max-width: 370px;
-  max-height: 514px;
+  width: 100%;
+  height: 514px;
   background-color: #fff;
-  margin-right: 30px;
+  margin-right: 15px;
+  margin-left: 15px;
 }
 .main .news__block .block__img {
   width: 100%;
