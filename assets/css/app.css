@@ -681,6 +681,9 @@ script {
 .footer__form__end__contacts .left__link:hover {
   color: #55B7FF;
 }
+.footer__form__end__contacts .left #mainAdress {
+  cursor: pointer;
+}
 .footer__form__end__contacts .left__link__icon {
   font-weight: 400;
   font-size: 18px;
