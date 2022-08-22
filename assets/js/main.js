@@ -306,22 +306,38 @@ function initMap() {
 
     $("#form-contact").validate({
       rules: {
-        phone: {
+        name: {
           required: true,
-          minlength: 13,
-          number: true,
-
+          minlength: 2,
+          withTwoStrings: true,
+        }
         },
-        email: {
-          required: true,
-          email: true
-        },
-      },
       messages: {
-        phone: "Please enter your phone with only digits",
+        name: {
+          required: "We need your name to contact you",
+          minlength: jQuery.validator.format("At least {0} characters required!")
+        },
         email: "Please enter a valid email address",
-      }
-    });
+      } 
+});
+
+jQuery.validator.addMethod(
+  "withTwoStrings",
+  function(value, e) {
+          howManyWords = value.trim();
+          howManyWords = howManyWords.replace(/\s{2,}/g, ' '); //remove extra spaces
+          howManyWords = howManyWords.split(' ');
+
+          if(howManyWords.length == 2){
+              return true;
+          }
+          else{
+              return false;
+          }
+      e.preventDefault();
+  },
+  "Please include First and Last name"
+);
 
     /* $('#mobile').on('click', function () {
       $('#mobile').mouseleave(function () {
