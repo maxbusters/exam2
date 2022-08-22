@@ -93,11 +93,25 @@ script {
 
     &__center-wrap {
         position: relative;
+        width: 108%;
         z-index: 3;
         margin-top: 223px;
         margin-bottom: 240px;
-        @include flex-col;
+        //@include flex-col;
         color: white;
+        
+    }
+
+    &__slide {
+        text-align: center;
+    }
+
+    &__slider {
+        .slick-dots {
+            @include flex-col;
+            right: 0;
+            width: 10px;
+        }
     }
 
     &__title {

@@ -173,14 +173,22 @@ script {
 }
 .header__center-wrap {
   position: relative;
+  width: 108%;
   z-index: 3;
   margin-top: 223px;
   margin-bottom: 240px;
+  color: white;
+}
+.header__slide {
+  text-align: center;
+}
+.header__slider .slick-dots {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  right: 0;
+  width: 10px;
 }
 .header__title {
   font-family: "Montserrat", sans-serif;
