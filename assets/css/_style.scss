@@ -134,7 +134,8 @@ script {
         padding: 100px 0px 150px;
         background-color: white;
         position: relative;
-        z-index: 100;
+        z-index: 10;
+        // @extend .container;
 
 
         &__line {
@@ -153,17 +154,29 @@ script {
         &__content {
             @extend .container;
             display: flex;
-          
             padding-top: 57px;
-            background-image: url("../images/sectionVitalii/back.png");
-            background-repeat: no-repeat;
-            background-size: 585px 470px;
             margin-bottom: 120px;
 
             &--img {
                 width: 630px;
                 height: 470px;
                 margin-right: 70px;
+                position: relative;
+
+                & img{
+                    position: relative;
+                    z-index: 100;
+                }
+                
+
+                &::before {
+                    content: url("../images/sectionVitalii/back.png");
+                    position: absolute;
+                    top:-57px;
+                    left: -215px;
+                    
+                    
+                }
             }
 
             &--txt {
@@ -192,7 +205,7 @@ script {
                     margin-bottom: 60px;
 
                     &:hover {
-                        background-color: rgba(255, 51, 0, 0.7);
+                        background-color: rgba(0, 102, 255, 0.7);
                         border: none;
                         text-shadow:
                             0 0 7px #fff,
@@ -246,16 +259,25 @@ script {
 
         .intro__content__second {
             //@extend .container;
-            background-image: url("../images/sectionVitalii/back2.png");
-            background-repeat: no-repeat;
-            background-size: 585px 470px;
-            background-position: top right;
             margin-bottom: 0px;
+            justify-content: center;
         }
 
         .second-img {
             margin-right: 0px;
             margin-left: 70px;
+
+            &::before{
+                content: " ";
+            }
+
+            &::after{
+                content: url("../images/sectionVitalii/back2.png");
+                position: absolute;
+                top: -57px;
+                right: -215px;
+
+            }
         }
 
     }

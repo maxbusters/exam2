@@ -216,7 +216,7 @@ script {
   padding: 100px 0px 150px;
   background-color: white;
   position: relative;
-  z-index: 100;
+  z-index: 10;
 }
 .main .intro__line {
   width: 100px;
@@ -236,15 +236,23 @@ script {
 .main .intro__content {
   display: flex;
   padding-top: 57px;
-  background-image: url("../images/sectionVitalii/back.png");
-  background-repeat: no-repeat;
-  background-size: 585px 470px;
   margin-bottom: 120px;
 }
 .main .intro__content--img {
   width: 630px;
   height: 470px;
   margin-right: 70px;
+  position: relative;
+}
+.main .intro__content--img img {
+  position: relative;
+  z-index: 100;
+}
+.main .intro__content--img::before {
+  content: url("../images/sectionVitalii/back.png");
+  position: absolute;
+  top: -57px;
+  left: -215px;
 }
 .main .intro__content--txt {
   padding-top: 80px;
@@ -280,7 +288,7 @@ script {
   margin-bottom: 60px;
 }
 .main .intro__content--txt--button:hover {
-  background-color: rgba(255, 51, 0, 0.7);
+  background-color: rgba(0, 102, 255, 0.7);
   border: none;
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #0fa, 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa;
 }
@@ -314,15 +322,21 @@ script {
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #0fa, 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa;
 }
 .main .intro .intro__content__second {
-  background-image: url("../images/sectionVitalii/back2.png");
-  background-repeat: no-repeat;
-  background-size: 585px 470px;
-  background-position: top right;
   margin-bottom: 0px;
+  justify-content: center;
 }
 .main .intro .second-img {
   margin-right: 0px;
   margin-left: 70px;
+}
+.main .intro .second-img::before {
+  content: " ";
+}
+.main .intro .second-img::after {
+  content: url("../images/sectionVitalii/back2.png");
+  position: absolute;
+  top: -57px;
+  right: -215px;
 }
 .main .news {
   display: flex;
