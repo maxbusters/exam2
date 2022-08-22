@@ -361,6 +361,7 @@ function initMap() {
   // first photo
   clicker.onclick = () => {
     galeryPhoto.style.width = "750px";
+    galeryPhoto.style.transition= "all .5s ease-in";
     clicker.style.display = "none"
     rightBlockGalery.style.display = "none";
     leftBlock.style.cssText = `
@@ -381,6 +382,7 @@ function initMap() {
   // second photo
   clicker2.onclick = () => {
     galeryPhoto2.style.width = "750px"
+    galeryPhoto2.style.transition= "all .5s ease-in";
     leftBlock.style.display = " none"
     clicker2.style.display = "none"
     galeryPhoto3.style.display = " none"
@@ -406,6 +408,7 @@ function initMap() {
   // thiry photo
   clicker3.onclick = () => {
     galeryPhoto3.style.width = "750px"
+    galeryPhoto3.style.transition= "all .5s ease-in";
     leftBlock.style.display = " none"
     clicker3.style.display = "none"
     galeryPhoto2.style.display = " none"
@@ -431,6 +434,7 @@ function initMap() {
   // four photo
   clicker4.onclick = () => {
     galeryPhoto4.style.width = "750px"
+    galeryPhoto4.style.transition= "all .5s ease-in";
     leftBlock.style.display = " none"
     clicker4.style.display = "none"
     galeryPhoto2.style.display = " none"
@@ -456,6 +460,7 @@ function initMap() {
   // five photo
   clicker5.onclick = () => {
     galeryPhoto5.style.width = "750px"
+    galeryPhoto5.style.transition= "all .5s ease-in";
     leftBlock.style.display = " none"
     clicker5.style.display = "none"
     galeryPhoto2.style.display = " none"

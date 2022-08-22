@@ -286,6 +286,7 @@ script {
   width: 190px;
   height: 50px;
   margin-bottom: 60px;
+  transition: all 0.3s ease-in;
 }
 .main .intro__content--txt--button:hover {
   background-color: rgba(0, 102, 255, 0.7);
@@ -316,6 +317,7 @@ script {
   line-height: 23px;
   color: black;
   font-style: italic;
+  transition: all 0.5s ease-in;
 }
 .main .intro__content--txt--link a:hover {
   color: rgba(255, 51, 0, 0.7);
