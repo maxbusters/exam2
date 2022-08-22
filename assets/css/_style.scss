@@ -644,6 +644,10 @@ script {
                         color: $blue;
                     }
 
+                    #mainAdress {
+                        cursor: pointer;
+                    }
+
                     &__link__icon {
                         font-weight: 400;
                         font-size: 18px;
