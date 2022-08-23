@@ -464,6 +464,18 @@ function newSliderHandler() {
   });
 }
 
+function headerSlider() {
+  $(".header__slider").slick({
+    dots: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    vertical: true,
+  verticalSwiping: true,
+  });
+}
+
 $(document).ready(function () {
   newSliderHandler();
+  headerSlider();
 });

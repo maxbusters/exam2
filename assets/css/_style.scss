@@ -93,11 +93,49 @@ script {
 
     &__center-wrap {
         position: relative;
+        width: 108%;
         z-index: 3;
         margin-top: 223px;
         margin-bottom: 240px;
-        @include flex-col;
         color: white;
+        margin-left: -37px;        
+    }
+
+    &__slide {
+        text-align: center;
+    }
+
+    &__slider {
+        .slick-dots {
+            @include flex-col;
+            right: 0;
+            width: 10px;
+
+            li {
+                &.slick-active {
+                    button:before {
+                        color: $white;
+                        font-size: 10px;
+                        opacity: 1;
+                    }
+                }
+
+                &:not(.slick-active) {
+
+                    button:before {
+                        content: "";
+                        background-image: url(../images/dot-empty.svg);
+                        background-repeat: no-repeat;
+                        background-position: center;
+                    }
+                }
+            }
+
+            li + li {
+                margin-top: 40px;
+            }
+        }
+
     }
 
     &__title {
