@@ -419,155 +419,32 @@ function initMap() {
     );
   });
 
-  let galeryPhoto = document.getElementById("sizePhoto")
-  let rightBlockGalery = document.getElementById("hidenField")
-  let clicker = document.getElementById("galerySizer")
-  let clicker2 = document.getElementById("galerySizer2")
-  let clicker3 = document.getElementById("galerySizer3")
-  let clicker4 = document.getElementById("galerySizer4")
-  let clicker5 = document.getElementById("galerySize5")
-  let leftBlock = document.getElementById("leftBlock")
-  let galeryPhoto2 = document.getElementById("sizePhoto2")
-  let galeryPhoto3 = document.getElementById("sizePhoto3")
-  let galeryPhoto4 = document.getElementById("sizePhoto4")
-  let galeryPhoto5 = document.getElementById("sizePhoto5")
-  // first photo
-  clicker.onclick = () => {
-    galeryPhoto.style.width = "750px";
-    galeryPhoto.style.transition= "all .5s ease-in";
-    clicker.style.display = "none"
-    rightBlockGalery.style.display = "none";
-    leftBlock.style.cssText = `
-  width:100%;
-  display:flex;
-  justify-content:center;
-  `
-  }
-  galeryPhoto.onclick = () => {
-    rightBlockGalery.style.display = "grid"
-    clicker.style.display = "block"
-    galeryPhoto.style.margin = "0";
-    galeryPhoto.style.width = "580px"
-    leftBlock.style.cssText = `
-  width:auto;
-  `
-  }
-  // second photo
-  clicker2.onclick = () => {
-    galeryPhoto2.style.width = "750px"
-    galeryPhoto2.style.transition= "all .5s ease-in";
-    leftBlock.style.display = " none"
-    clicker2.style.display = "none"
-    galeryPhoto3.style.display = " none"
-    galeryPhoto4.style.display = " none"
-    galeryPhoto5.style.display = " none"
-    rightBlockGalery.style.cssText = `
-  width:100%;
-  display:flex;
-  justify-content:center;
-  `
-  }
-  galeryPhoto2.onclick = () => {
-    leftBlock.style.display = "block"
-    galeryPhoto2.style.width = "285px"
-    galeryPhoto3.style.display = " block"
-    galeryPhoto4.style.display = " block"
-    galeryPhoto5.style.display = " block"
-    rightBlockGalery.style.cssText = `
-  display:grid;
-  width:auto;`
-    clicker2.style.display = "block"
-  }
-  // thiry photo
-  clicker3.onclick = () => {
-    galeryPhoto3.style.width = "750px"
-    galeryPhoto3.style.transition= "all .5s ease-in";
-    leftBlock.style.display = " none"
-    clicker3.style.display = "none"
-    galeryPhoto2.style.display = " none"
-    galeryPhoto4.style.display = " none"
-    galeryPhoto5.style.display = " none"
-    rightBlockGalery.style.cssText = `
-  width:100%;
-  display:flex;
-  justify-content:center;
-  `
-  }
-  galeryPhoto3.onclick = () => {
-    galeryPhoto3.style.width = "285px"
-    leftBlock.style.display = "block"
-    galeryPhoto4.style.display = " block"
-    galeryPhoto5.style.display = " block"
-    galeryPhoto2.style.display = " block"
-    rightBlockGalery.style.cssText = `
-   display:grid;
-    width:auto;`
-    clicker3.style.display = "block"
-  }
-  // four photo
-  clicker4.onclick = () => {
-    galeryPhoto4.style.width = "750px"
-    galeryPhoto4.style.transition= "all .5s ease-in";
-    leftBlock.style.display = " none"
-    clicker4.style.display = "none"
-    galeryPhoto2.style.display = " none"
-    galeryPhoto3.style.display = " none"
-    galeryPhoto5.style.display = " none"
-    rightBlockGalery.style.cssText = `
-    width:100%;
-    display:flex;
-    justify-content:center;
-    `
-  }
-  galeryPhoto4.onclick = () => {
-    galeryPhoto4.style.width = "285px"
-    leftBlock.style.display = "block"
-    galeryPhoto3.style.display = " block"
-    galeryPhoto5.style.display = " block"
-    galeryPhoto2.style.display = " block"
-    rightBlockGalery.style.cssText = `
-   display:grid;
-    width:auto;`
-    clicker4.style.display = "block"
-  }
-  // five photo
-  clicker5.onclick = () => {
-    galeryPhoto5.style.width = "750px"
-    galeryPhoto5.style.transition= "all .5s ease-in";
-    leftBlock.style.display = " none"
-    clicker5.style.display = "none"
-    galeryPhoto2.style.display = " none"
-    galeryPhoto3.style.display = " none"
-    galeryPhoto4.style.display = " none"
-    rightBlockGalery.style.cssText = `
-    width:100%;
-    display:flex;
-    justify-content:center;
-    `
-  }
-  galeryPhoto5.onclick = () => {
-    galeryPhoto5.style.width = "285px"
-    leftBlock.style.display = "block"
-    galeryPhoto3.style.display = " block"
-    galeryPhoto4.style.display = " block"
-    galeryPhoto2.style.display = " block"
-    rightBlockGalery.style.cssText = `
-   display:grid;
-    width:auto;`
-    clicker5.style.display = "block"
-  }
-  // galeryPhoto5.onclick = () =>{
-  //   galeryPhoto5.style.width ="285px"
-  //   leftBlock.style.display ="block"
-  //   galeryPhoto3.style.display =" block"
-  //   galeryPhoto4.style.display =" block"
-  //   galeryPhoto2.style.display =" block"
-  //   rightBlockGalery.style.cssText =`
-  //  display:grid;
-  //   width:auto;`
-  //   clicker5.style.display = "block"
-  // }
 }
+$(document).ready(() =>  {
+  $('.photo-field__left--svg').on('click', function(evt) {
+    $(".photo-field__right--item").hide();
+    $(".photo-field__left").hide();
+    $('.photo-field__left--svg') .hide();
+    $(".photo-field__right").css({gridTemplate: "1fr/ 1fr"});
+    $(this).parent().css({width:"100%", display:"flex"}) ;
+    $(this).siblings().css({width:"700px",transition: "all .7s ease-in"})
+});
+$(".photo").on('click', function(evt) {
+  $('.photo-field__left--svg').show()
+  $(this).css({width:"285px"})
+  $(".photo-field__right--item").show();
+  $(".photo-field__left").show();
+  $(".photo-field__right").css({gridTemplate: "repeat(2, 1fr) / repeat(2, 1fr)"});
+})
+$(".PhotoMain").on('click', function(evt) {
+  $('.photo-field__left--svg').show()
+  $(".PhotoMain").css({width:"580px"})
+  $(".photo").css({width:"auto"})
+  $(".photo-field__right--item").show();
+  $(".photo-field__left").show();
+  $(".photo-field__right").css({gridTemplate: "repeat(2, 1fr) / repeat(2, 1fr)"});
+})
+})
 
 const getInTouch = document.getElementsByClassName('footer__form__start')
 const closeForm = document.getElementsByClassName('footer__form__end__close')
