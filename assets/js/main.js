@@ -426,23 +426,20 @@ $(document).ready(() =>  {
     $(".photo-field__left").hide();
     $('.photo-field__left--svg') .hide();
     $(".photo-field__right").css({gridTemplate: "1fr/ 1fr"});
-    $(this).parent().css({width:"100%", display:"flex"}) ;
-    $(this).siblings().css({width:"700px",transition: "all .7s ease-in"})
+    $(this).parent().css({display:"flex"});
+    $(this).parent().animate({width:"700px"},1000)
+    $(this).siblings().css({width:"100%"})
+    $(".galery-cross").css({width:"25px", display:"block"})
+                  
 });
-$(".photo").on('click', function(evt) {
-  $('.photo-field__left--svg').show()
-  $(this).css({width:"285px"})
+$(".galery-cross").on('click', function(evt) {
   $(".photo-field__right--item").show();
   $(".photo-field__left").show();
-  $(".photo-field__right").css({gridTemplate: "repeat(2, 1fr) / repeat(2, 1fr)"});
-})
-$(".PhotoMain").on('click', function(evt) {
+  $(".photo-field__right").css({gridTemplate: "repeat(2, 1fr) / repeat(2, 1fr)",height:"100%"});
+  $(".galery-cross").hide();
   $('.photo-field__left--svg').show()
-  $(".PhotoMain").css({width:"580px"})
-  $(".photo").css({width:"auto"})
-  $(".photo-field__right--item").show();
-  $(".photo-field__left").show();
-  $(".photo-field__right").css({gridTemplate: "repeat(2, 1fr) / repeat(2, 1fr)"});
+  $(this).parent().css({width:"auto"})
+  $(".photo").css({height:"100%"})
 })
 })
 

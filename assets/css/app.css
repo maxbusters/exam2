@@ -511,12 +511,14 @@ script {
 .main .gallery .photo-field {
   display: flex;
   margin-bottom: 60px;
+  align-content: center;
 }
 .main .gallery .photo-field__left {
   position: relative;
 }
 .main .gallery .photo-field__left img {
   width: auto;
+  height: auto;
 }
 .main .gallery .photo-field__left--svg {
   position: absolute;
@@ -529,19 +531,26 @@ script {
   margin-left: 10px;
   display: grid;
   grid-template: repeat(2, 1fr)/repeat(2, 1fr);
-  row-gap: 10px;
+  row-gap: 9px;
   -moz-column-gap: 10px;
        column-gap: 10px;
 }
 .main .gallery .photo-field__right--item {
   position: relative;
+  transition: "all .7s ease-in" .main .gallery .photo-field__right--item --svg;
+  transition-position: absolute;
+  transition-transform: translate(-50%, -50%);
+  transition-top: 50%;
+  transition-left: 50%;
+  transition-cursor: pointer;
 }
-.main .gallery .photo-field__right--item--svg {
+.main .galery-cross {
   position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%;
+  top: 20px;
+  right: 20px;
+  display: none;
   cursor: pointer;
+  width: 30px;
 }
 .main .button-galery {
   margin: 0 auto;
