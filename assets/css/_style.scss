@@ -491,12 +491,14 @@ script {
         .photo-field {
             display: flex;
             margin-bottom: 60px;
+            align-content: center;
 
             &__left {
                 position: relative;
 
                 & img {
                     width: auto;
+                    height: auto;
                 }
 
                 &--svg {
@@ -513,12 +515,13 @@ script {
                 margin-left: 10px;
                 display: grid;
                 grid-template: repeat(2, 1fr) / repeat(2, 1fr);
-                row-gap: 10px;
+                row-gap: 9px;
                 column-gap: 10px;
         
 
                 &--item {
                     position: relative;
+                    transition: "all .7s ease-in"
 
                     &--svg {
                         position: absolute;
@@ -532,7 +535,15 @@ script {
             }
         }
     }
+    .galery-cross{
+        position: absolute;
+        top:20px;
+        right: 20px;
+        display: none;
+        cursor: pointer;
+        width: 30px;
 
+    }
     .button-galery {
         margin: 0 auto;
     }
